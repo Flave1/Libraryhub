@@ -16,3 +16,7 @@ Password : Admin@Libraryhub.com1
 Database Migration
 
 Error Logger : Logging to file
+
+
+Restore all nugget packeges
+Add migration and Update database to use App

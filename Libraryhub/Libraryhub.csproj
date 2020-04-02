@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>aspnet-Libraryhub-AFAD2090-F685-465D-95CB-4AE69A60B11D</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Handlers\Posts\**" />
+    <Content Remove="Handlers\Posts\**" />
+    <EmbeddedResource Remove="Handlers\Posts\**" />
+    <None Remove="Handlers\Posts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20200401001125_InitialMigration.cs" />
+    <Compile Remove="Data\Migrations\20200401001125_InitialMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200401001518_InitialMigration.cs" />
+    <Compile Remove="Data\Migrations\20200401001518_InitialMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200401181929_DatabaseOBjectMigration.cs" />
+    <Compile Remove="Data\Migrations\20200401181929_DatabaseOBjectMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200401182550_AddedBookActivityDetails.cs" />
+    <Compile Remove="Data\Migrations\20200401182550_AddedBookActivityDetails.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200401192053_DatabaseOBjectsMigration.cs" />
+    <Compile Remove="Data\Migrations\20200401192053_DatabaseOBjectsMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200401192548_DatabaseOBjectsMigration.cs" />
+    <Compile Remove="Data\Migrations\20200401192548_DatabaseOBjectsMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200401193132_DatabaseOBjectsMigration.cs" />
+    <Compile Remove="Data\Migrations\20200401193132_DatabaseOBjectsMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200402135930_RemovedBookActivityDetailTable.cs" />
+    <Compile Remove="Data\Migrations\20200402135930_RemovedBookActivityDetailTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200402143322_modifiesBookPenalty.cs" />
+    <Compile Remove="Data\Migrations\20200402143322_modifiesBookPenalty.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation" Version="9.0.0-preview3" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.0.0-preview3" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0-preview.1.20120.4" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.0" />
+    <PackageReference Include="Serilog" Version="2.9.1-dev-01154" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.2.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0-preview.1.20120.5" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Libraryhub.Contracts\Libraryhub.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

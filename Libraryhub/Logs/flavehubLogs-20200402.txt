@@ -1,0 +1,368 @@
+2020-04-02T16:41:40.6219098+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-02T16:41:53.6380529+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-02T16:41:53.6524494+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-02T16:41:53.9972377+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-02T16:42:06.1594789+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T16:42:10.3670576+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T16:42:11.0721077+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-02T16:42:14.7880304+01:00 80000094-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-02T16:42:17.8681753+01:00 80000094-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:42:22.8413215+01:00 80000094-0000-fd00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-02T16:42:22.9389101+01:00 80000094-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-02T16:42:23.3448675+01:00 80000094-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 5247.6347000000005ms (afa2e885)
+2020-04-02T16:42:23.3950641+01:00 80000094-0000-fd00-b63f-84710c7967bb [INF] Request finished in 9459.7358ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-02T16:42:29.0747916+01:00 80000081-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-02T16:42:29.2468477+01:00 80000081-0001-ff00-b63f-84710c7967bb [INF] Request finished in 193.7853ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-02T16:42:34.5692167+01:00 80000083-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-02T16:42:35.0921804+01:00 80000083-0001-ff00-b63f-84710c7967bb [INF] Request finished in 861.6218ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-02T16:42:46.8263488+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/api/v1/book/LoadAllBooks   (ca22a1cb)
+2020-04-02T16:42:46.9362413+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllPost\", controller = \"Book\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IList`1[Libraryhub.Contracts.RequestObjs.BookResponseObj]]] GetAllPostAsync()" on controller "Libraryhub.Controllers.V1.BookController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:42:47.0331428+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Authorization failed. (b15dd539)
+2020-04-02T16:42:47.0420727+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-04-02T16:42:47.0611652+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Executing ChallengeResult with authentication schemes (["Bearer"]). (f3dca807)
+2020-04-02T16:42:47.0979258+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2020-04-02T16:42:47.1107377+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.BookController.GetAllPostAsync (Libraryhub)" in 161.2475ms (afa2e885)
+2020-04-02T16:42:47.1245623+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:42:47.1419026+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-02T16:42:47.1669459+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 18.7332ms (afa2e885)
+2020-04-02T16:42:47.2257931+01:00 80000096-0000-fd00-b63f-84710c7967bb [INF] Request finished in 415.5953ms 401 application/json; charset=utf-8 (791a596a)
+2020-04-02T16:43:26.8406095+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/identity/login application/json 67 (ca22a1cb)
+2020-04-02T16:43:26.8834797+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Login\", controller = \"Identity\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Libraryhub.Contracts.RequestObjs.UserLoginReqObj)" on controller "Libraryhub.Controllers.V1.IdentityController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:43:27.6134123+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-02T16:43:27.6501841+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-02T16:43:28.2646008+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE ([a].[UserId] = @__user_Id_0) AND @__user_Id_0 IS NOT NULL" (65d11854)
+2020-04-02T16:43:30.3287019+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE ([a].[UserId] = @__userId_0) AND @__userId_0 IS NOT NULL" (65d11854)
+2020-04-02T16:43:32.2433437+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T16:43:32.3244240+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE ([a].[RoleId] = @__role_Id_0) AND @__role_Id_0 IS NOT NULL" (65d11854)
+2020-04-02T16:43:35.1733734+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Token], [CreationDate], [ExpiryDate], [Invalidated], [JwtId], [Used], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (65d11854)
+2020-04-02T16:43:35.8376598+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.AuthSuccessResponse"'. (8a1b66c8)
+2020-04-02T16:43:35.9242239+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.IdentityController.Login (Libraryhub)" in 8989.0696ms (afa2e885)
+2020-04-02T16:43:36.8980577+01:00 80000085-0001-ff00-b63f-84710c7967bb [INF] Request finished in 9285.4465ms 200 application/json; charset=utf-8 (791a596a)
+2020-04-02T16:44:09.3433839+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/api/v1/book/LoadAllBooks   (ca22a1cb)
+2020-04-02T16:44:11.6307403+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2020-04-02T16:44:11.6767319+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllPost\", controller = \"Book\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IList`1[Libraryhub.Contracts.RequestObjs.BookResponseObj]]] GetAllPostAsync()" on controller "Libraryhub.Controllers.V1.BookController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:44:11.6980174+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-04-02T16:44:12.7855957+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-02T16:44:12.9823536+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[BookId], [b].[CoverPrice], [b].[ISBN], [b].[IsAvailable], [b].[PublishYear], [b].[Title], [b0].[CheckOutActivityId], [b0].[BookId], [b0].[CheckOutDate], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status], [b0].[UserId]
+FROM [Books] AS [b]
+LEFT JOIN [BookActivities] AS [b0] ON [b].[BookId] = [b0].[BookId]
+ORDER BY [b].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-02T16:44:14.2442268+01:00 80000087-0001-ff00-b63f-84710c7967bb [ERR] An exception occurred while iterating over the results of a query for context type '"Libraryhub.Data.DataContext"'."
+""System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.String'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.String'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2020-04-02T16:44:23.6610080+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.BookController.GetAllPostAsync (Libraryhub)" in 10425.3641ms (afa2e885)
+2020-04-02T16:44:26.3066927+01:00 80000087-0001-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.String'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Libraryhub.Service.ServiceImplementation.BookService.GetAllBooksAsync() in C:\M_proj2\Client\Libraryhub\Libraryhub\Service\ServiceImplementation\BookService.cs:line 29
+   at Libraryhub.Handlers.Books.GetAllBooksHandler.MediatR.IRequestHandler<Libraryhub.Contracts.Queries.GetAllBooksQuery,System.Collections.Generic.List<Libraryhub.Contracts.RequestObjs.BookResponseObj>>.Handle(GetAllBooksQuery request, CancellationToken cancellationToken) in C:\M_proj2\Client\Libraryhub\Libraryhub\Handlers\Books\GetAllBooksHandler.cs:line 26
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Libraryhub.Controllers.V1.BookController.GetAllPostAsync() in C:\M_proj2\Client\Libraryhub\Libraryhub\Controllers\V1\BookController.cs:line 40
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-04-02T16:44:26.8058162+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:44:27.1071675+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-02T16:44:27.1153907+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-02T16:44:27.2210934+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 388.4803ms (afa2e885)
+2020-04-02T16:44:27.3569585+01:00 80000087-0001-ff00-b63f-84710c7967bb [INF] Request finished in 17918.2801ms 500 application/json; charset=utf-8 (791a596a)
+2020-04-02T16:46:49.7479734+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-02T16:47:01.9385822+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-02T16:47:01.9678684+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-02T16:47:02.2644697+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-02T16:47:13.4691672+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T16:47:14.0656092+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T16:47:14.1300102+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-02T16:47:14.8547131+01:00 80000098-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-02T16:47:15.7349750+01:00 80000098-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:47:18.6997150+01:00 80000098-0000-fd00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-02T16:47:19.4240546+01:00 80000098-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-02T16:47:19.9245650+01:00 80000098-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 4142.6537ms (afa2e885)
+2020-04-02T16:47:20.0095345+01:00 80000098-0000-fd00-b63f-84710c7967bb [INF] Request finished in 5149.3397ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-02T16:47:31.3541132+01:00 80000089-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-02T16:47:31.4548756+01:00 80000089-0001-ff00-b63f-84710c7967bb [INF] Request finished in 105.3523ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-02T16:47:33.0820164+01:00 8000008b-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-02T16:47:33.5755627+01:00 8000008b-0001-ff00-b63f-84710c7967bb [INF] Request finished in 467.28490000000005ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-02T16:48:12.3458341+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/api/v1/book/LoadAllBooks   (ca22a1cb)
+2020-04-02T16:48:12.4289748+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllPost\", controller = \"Book\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IList`1[Libraryhub.Contracts.RequestObjs.BookResponseObj]]] GetAllPostAsync()" on controller "Libraryhub.Controllers.V1.BookController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:48:12.4786486+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Authorization failed. (b15dd539)
+2020-04-02T16:48:12.4900702+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-04-02T16:48:12.5208828+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Executing ChallengeResult with authentication schemes (["Bearer"]). (f3dca807)
+2020-04-02T16:48:12.5469716+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2020-04-02T16:48:12.5635846+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.BookController.GetAllPostAsync (Libraryhub)" in 117.8875ms (afa2e885)
+2020-04-02T16:48:12.5768148+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:48:12.5926342+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-02T16:48:12.6130464+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 17.6369ms (afa2e885)
+2020-04-02T16:48:12.7570237+01:00 8000009a-0000-fd00-b63f-84710c7967bb [INF] Request finished in 723.2665000000001ms 401 application/json; charset=utf-8 (791a596a)
+2020-04-02T16:48:40.2216024+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/identity/login application/json 67 (ca22a1cb)
+2020-04-02T16:48:40.2918745+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Login\", controller = \"Identity\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Libraryhub.Contracts.RequestObjs.UserLoginReqObj)" on controller "Libraryhub.Controllers.V1.IdentityController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:48:40.5485498+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-02T16:48:40.5669243+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-02T16:48:43.1149409+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE ([a].[UserId] = @__user_Id_0) AND @__user_Id_0 IS NOT NULL" (65d11854)
+2020-04-02T16:48:44.3471477+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE ([a].[UserId] = @__userId_0) AND @__userId_0 IS NOT NULL" (65d11854)
+2020-04-02T16:48:44.4082160+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T16:48:44.4500109+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE ([a].[RoleId] = @__role_Id_0) AND @__role_Id_0 IS NOT NULL" (65d11854)
+2020-04-02T16:48:45.9593943+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Token], [CreationDate], [ExpiryDate], [Invalidated], [JwtId], [Used], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (65d11854)
+2020-04-02T16:48:46.1442921+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.AuthSuccessResponse"'. (8a1b66c8)
+2020-04-02T16:48:46.1798715+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.IdentityController.Login (Libraryhub)" in 5867.4425ms (afa2e885)
+2020-04-02T16:48:46.2207029+01:00 8000008d-0001-ff00-b63f-84710c7967bb [INF] Request finished in 6047.330400000001ms 200 application/json; charset=utf-8 (791a596a)
+2020-04-02T16:49:11.2821556+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/api/v1/book/LoadAllBooks   (ca22a1cb)
+2020-04-02T16:49:11.6274328+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Successfully validated the token. (60169667)
+2020-04-02T16:49:11.6443793+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllPost\", controller = \"Book\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IList`1[Libraryhub.Contracts.RequestObjs.BookResponseObj]]] GetAllPostAsync()" on controller "Libraryhub.Controllers.V1.BookController" ("Libraryhub"). (122b2fdf)
+2020-04-02T16:49:11.6605929+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-04-02T16:49:12.7710606+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-02T16:49:13.0673069+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[BookId], [b].[CoverPrice], [b].[ISBN], [b].[IsAvailable], [b].[PublishYear], [b].[Title], [b0].[CheckOutActivityId], [b0].[BookId], [b0].[CheckOutDate], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status], [b0].[UserId]
+FROM [Books] AS [b]
+LEFT JOIN [BookActivities] AS [b0] ON [b].[BookId] = [b0].[BookId]
+ORDER BY [b].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-02T16:49:15.2907815+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Unable to Process request Flave123 (71209f87)
+2020-04-02T16:49:15.5508795+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Libraryhub.Contracts.RequestObjs.BookResponseObj, Libraryhub.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-04-02T16:49:16.9925824+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.BookController.GetAllPostAsync (Libraryhub)" in 4665.3294000000005ms (afa2e885)
+2020-04-02T16:49:17.0199848+01:00 8000009c-0000-fd00-b63f-84710c7967bb [INF] Request finished in 5842.137000000001ms 200 application/json; charset=utf-8 (791a596a)
+2020-04-02T17:12:01.3601359+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-02T17:12:25.1059018+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-02T17:12:25.6598027+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-02T17:12:30.1937479+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-02T17:13:06.2561177+01:00  [ERR] An error occurred using the connection to database '"Libraryhub"' on server '"FLAVE-DESKTOP-9"'. (5fc3407c)
+2020-04-02T17:13:18.7040937+01:00  [ERR] An exception occurred while iterating over the results of a query for context type '"Libraryhub.Data.DataContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5673; handshake=4907; [Login] initialization=10; authentication=601; [Post-Login] complete=5058; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:69434c80-b966-4e7f-a04a-6c81b5d21114
+Error Number:-2,State:0,Class:11" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5673; handshake=4907; [Login] initialization=10; authentication=601; [Post-Login] complete=5058; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.RoleManager`1.RoleExistsAsync(String roleName)
+   at Libraryhub.Startup.CreateRolesAndAdminUser(IServiceProvider serviceProvider) in C:\M_proj2\Client\Libraryhub\Libraryhub\Startup.cs:line 102
+ClientConnectionId:69434c80-b966-4e7f-a04a-6c81b5d21114
+Error Number:-2,State:0,Class:11
+2020-04-02T17:14:48.3088335+01:00  [FTL] Application startup exception (6c57a5ba)
+System.AggregateException: One or more errors occurred. (Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5673; handshake=4907; [Login] initialization=10; authentication=601; [Post-Login] complete=5058; )
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5673; handshake=4907; [Login] initialization=10; authentication=601; [Post-Login] complete=5058; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.RoleManager`1.RoleExistsAsync(String roleName)
+   at Libraryhub.Startup.CreateRolesAndAdminUser(IServiceProvider serviceProvider) in C:\M_proj2\Client\Libraryhub\Libraryhub\Startup.cs:line 102
+ClientConnectionId:69434c80-b966-4e7f-a04a-6c81b5d21114
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Libraryhub.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider) in C:\M_proj2\Client\Libraryhub\Libraryhub\Startup.cs:line 81
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String startupMessage)
+2020-04-02T17:20:26.7521985+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-02T17:20:44.3458658+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-02T17:20:44.3770828+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-02T17:20:44.6963445+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-02T17:20:55.2621110+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T17:20:56.4723022+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T17:21:00.8754203+01:00  [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);" (65d11854)
+2020-04-02T17:21:01.0650307+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T17:21:02.1486968+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-02T17:21:02.2365322+01:00  [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);" (65d11854)
+2020-04-02T17:21:02.3971405+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-02T17:21:06.3307069+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedUserName] = @__normalizedUserName_0) AND ([a].[NormalizedUserName] IS NOT NULL AND @__normalizedUserName_0 IS NOT NULL)) OR ([a].[NormalizedUserName] IS NULL AND @__normalizedUserName_0 IS NULL)" (65d11854)
+2020-04-02T17:21:07.7598233+01:00  [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NationalIdentificationNumber], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);" (65d11854)
+2020-04-02T17:21:07.8875924+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedRoleName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedRoleName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedRoleName_0 IS NULL)" (65d11854)
+2020-04-02T17:21:08.0477213+01:00  [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND @__p_0 IS NOT NULL) AND (([a].[RoleId] = @__p_1) AND @__p_1 IS NOT NULL)" (65d11854)
+2020-04-02T17:21:08.1112084+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedRoleName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedRoleName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedRoleName_0 IS NULL)" (65d11854)
+2020-04-02T17:21:08.1890198+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedUserName] = @__normalizedUserName_0) AND ([a].[NormalizedUserName] IS NOT NULL AND @__normalizedUserName_0 IS NOT NULL)) OR ([a].[NormalizedUserName] IS NULL AND @__normalizedUserName_0 IS NULL)" (65d11854)
+2020-04-02T17:21:08.3000011+01:00  [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);" (65d11854)
+2020-04-02T17:21:08.4012916+01:00  [INF] Executing DbCommand [Parameters=["@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FullName] = @p4, [LockoutEnabled] = @p5, [LockoutEnd] = @p6, [NationalIdentificationNumber] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-02T17:21:18.8018705+01:00 8000008f-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-02T17:21:22.9120186+01:00 8000008f-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-02T17:21:24.9531126+01:00 8000008f-0001-ff00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-02T17:21:26.7968881+01:00 8000008f-0001-ff00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-02T17:21:27.2245983+01:00 8000008f-0001-ff00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 4279.8754ms (afa2e885)
+2020-04-02T17:21:27.3533206+01:00 8000008f-0001-ff00-b63f-84710c7967bb [INF] Request finished in 9629.6096ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-02T17:21:35.1505130+01:00 80000091-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-02T17:21:35.4094481+01:00 80000091-0001-ff00-b63f-84710c7967bb [INF] Request finished in 272.5418ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-02T17:21:41.9721422+01:00 8000009f-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-02T17:21:42.7009555+01:00 8000009f-0000-fd00-b63f-84710c7967bb [INF] Request finished in 726.7737000000001ms 200 application/json;charset=utf-8 (791a596a)

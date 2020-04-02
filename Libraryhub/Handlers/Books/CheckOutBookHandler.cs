@@ -43,7 +43,7 @@ namespace Libraryhub.Handlers.Books
                     Email = currentUser.Email,
                     ExpectedReturnDate = DateTime.Today.AddDays(12),
                     FullName = currentUser.FullName,
-                    NationalIdentificationNumber = currentUser.NationalIdentificationNumber,
+                    NationalIdentificationNumber = currentUser.NationalIdentificationNumber??"BIMC123QWEG",
                     PhoneNumber = currentUser.PhoneNumber,
                     ReturnDate = null,
                     Status = (int)BookActivityStatus.Check_Out,

@@ -111,6 +111,7 @@ namespace Libraryhub.Controllers.V1
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost(ApiRoutes.Book.CHECK_OUT_BOOKS_ENDPOINT)]
         public async Task<IActionResult> CheckOutBook([FromBody] AddCheckOutActivityRequestObj requestObj)
         {
@@ -128,6 +129,7 @@ namespace Libraryhub.Controllers.V1
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost(ApiRoutes.Book.CHECK_IN_BOOKS_ENDPOINT)]
         public async Task<IActionResult> CheckInBook([FromBody] EditCheckOutActivityRequestObj requestObj)
         {

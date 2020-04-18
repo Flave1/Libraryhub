@@ -8,6 +8,12 @@ namespace Libraryhub.AppEnum
     public enum BookActivityStatus
     {
         Check_Out = 1,
-        Check_In
+        Check_In,
+        Sold
+    }
+    public enum Switch
+    {
+        OFF = 0,
+        ON = 1,
     }
 }

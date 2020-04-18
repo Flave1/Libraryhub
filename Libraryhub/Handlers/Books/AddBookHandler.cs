@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Libraryhub.Contracts.Commands;
 using Libraryhub.Contracts.RequestObjs;
+using Libraryhub.Contracts.Response;
 using Libraryhub.CustomError;
 using Libraryhub.DomainObjs;
 using Libraryhub.Service.Services;
@@ -14,32 +15,56 @@ using System.Threading.Tasks;
 
 namespace Libraryhub.Handlers.Books
 {
-    public class AddBookHandler : IRequestHandler<AddBookCommand, BookResponseObj>
+    public class AddBookHandler : IRequestHandler<AddBookCommand, RegBookResponseObj>
     {
         private readonly IBookService _bookService;
-        private readonly IMapper _mapper;
         private readonly ILogger _logger;
-        public AddBookHandler(IBookService bookService, IMapper mapper, ILoggerFactory loggerFactory)
+        public AddBookHandler(IBookService bookService, ILoggerFactory loggerFactory)
         {
             _bookService = bookService;
-            _mapper = mapper;
             _logger = loggerFactory.CreateLogger(typeof(AddBookHandler));
         }
-        public async Task<BookResponseObj> Handle(AddBookCommand request, CancellationToken cancellationToken)
+        public async Task<RegBookResponseObj> Handle(AddBookCommand request, CancellationToken cancellationToken)
         {
             try
             {
                 var book = new Book
                 {
                     CoverPrice = request.CoverPrice,
-                    IsAvailable = request.IsAvailable,
+                    IsAvailable = true,
                     ISBN = request.ISBN,
                     PublishYear = request.PublishYear,
                     Title = request.Title, 
+                    Quantity = request.Quantity,
+                    InitialQuantity = request.Quantity
                 };
-                var result = await _bookService.AddNewBookAsync(book);
-                var response = _mapper.Map<BookResponseObj>(book);
-                return await Task.Run(() => response);
+
+                var bookExist = await _bookService.BookExistAsync(book);
+                if (bookExist)
+                {
+                    return new RegBookResponseObj
+                    { 
+                        Status = new APIResponseStatus
+                        {
+                            IsSuccessful = false,
+                            Message = new APIResponseMessage
+                            {
+                                FriendlyMessage = $"{book.Title} with {book.ISBN} published on {book.PublishYear} already exist"
+                            }
+                        }
+                    };
+                }
+
+                await _bookService.AddNewBookAsync(book);
+
+                return new RegBookResponseObj
+                {
+                    BookId = book.BookId,
+                    Status = new APIResponseStatus
+                    {
+                        IsSuccessful = true
+                    }
+                };
             }
             catch (Exception ex)
             {

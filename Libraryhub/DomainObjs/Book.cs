@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Libraryhub.DomainObjs
 {
-    public class Book
+    public class Book 
     {
         public int BookId { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Book Title is required")]
@@ -22,6 +22,18 @@ namespace Libraryhub.DomainObjs
         public decimal CoverPrice { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Availability is required")]
         public bool IsAvailable { get; set; }
-        public virtual List<CheckOutActivity> CheckOutActivities { get; set; }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Quantity of books is required")]
+        public int Quantity { get; set; }
+        public int InitialQuantity { get; set; }
+        public virtual List<BooksActivity> CheckOutActivities { get; set; }
+
+        //FOR SEARCH
+        public string ClassificationNo { get; set; }
+        public string Language { get; set; }
+        public string Author { get; set; }
+        public string AccessionNo { get; set; }
+        public string Section { get; set; }
+        public string Size { get; set; }
+        public string Color { get; set; }
     }
 }

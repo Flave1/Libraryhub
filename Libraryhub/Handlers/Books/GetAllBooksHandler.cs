@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Libraryhub.Contracts.Queries;
 using Libraryhub.Contracts.RequestObjs;
+using Libraryhub.Contracts.Response;
+using Libraryhub.ErrorHandler;
 using Libraryhub.Service.Services;
 using MediatR;
 using System;
@@ -11,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Libraryhub.Handlers.Books
 {
-    public class GetAllBooksHandler : IRequestHandler<GetAllBooksQuery, List<BookResponseObj>>
+    public class GetAllBooksHandler : IRequestHandler<GetAllBooksQuery, BookResponseObj>
     {
         private readonly IBookService _bookService;
         private readonly IMapper _mapper; 
@@ -19,12 +21,25 @@ namespace Libraryhub.Handlers.Books
         {
             _bookService = bookService;
             _mapper = mapper;
-        } 
+        }
 
-        async Task<List<BookResponseObj>> IRequestHandler<GetAllBooksQuery, List<BookResponseObj>>.Handle(GetAllBooksQuery request, CancellationToken cancellationToken)
+        public async Task<BookResponseObj> Handle(GetAllBooksQuery request, CancellationToken cancellationToken)
         {
             var books = await _bookService.GetAllBooksAsync();
-            return _mapper.Map<List<BookResponseObj>>(books);
+
+            var response = new BookResponseObj
+            {
+                Books = _mapper.Map<List<BookObj>>(books),
+                Status = new APIResponseStatus
+                {
+                    IsSuccessful = books == null ? true : false,
+                    Message = new APIResponseMessage
+                    {
+                        FriendlyMessage = books == null ? "Search Complete!! No Record Found" : null
+                    }
+                }
+            };
+            return response;
         }
     }
 }

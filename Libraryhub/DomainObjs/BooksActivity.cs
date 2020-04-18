@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace Libraryhub.DomainObjs
 {
-    public class CheckOutActivity
+    public class BooksActivity : Admin
     { 
         
+        [Key]
         public int CheckOutActivityId { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Book Id is required")]
         public int BookId { get; set; }
@@ -24,8 +25,8 @@ namespace Libraryhub.DomainObjs
         [Required(AllowEmptyStrings = false, ErrorMessage = "Book Status required")]
         public int Status {get;set;}
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "User Id is required")]
-        public string UserId { get; set; }
+        [Required(AllowEmptyStrings = false, ErrorMessage = "CustomerId is required")]
+        public string CustomerId { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Email required")]
         [EmailAddress]
         public string  Email { get; set; }

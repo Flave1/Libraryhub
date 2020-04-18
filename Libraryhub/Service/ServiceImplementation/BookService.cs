@@ -32,51 +32,35 @@ namespace Libraryhub.Service.ServiceImplementation
 
         public async Task<Book> GetBookByIdAsync(int bookId)
         {
-            return await _dataContext.Books.SingleOrDefaultAsync(x => x.BookId == bookId);
+            var result = await _dataContext.Books.Include(x => x.CheckOutActivities).SingleOrDefaultAsync(x => x.BookId == bookId);
+            return result;
         }
 
-        public async Task<Book> GetBookByISBNAsync(string isbn)
-        {
-            return await _dataContext.Books.SingleOrDefaultAsync(x => x.ISBN.ToLower().Trim() == isbn.ToLower().Trim());
-        }
 
-        public async Task<IEnumerable<Book>> GetBookByStatusAsync(bool status)
-        {
-            return await _dataContext.Books.Where(x => x.IsAvailable == status).ToListAsync();
-        }
-
-        public async Task<Book> GetBookByTitleAsync(string title)
-        {
-            return await _dataContext.Books.SingleOrDefaultAsync(x => x.Title.ToLower().Trim() == title.ToLower().Trim());
-        }
-         
         public async Task<bool> UpdateBookAsync(Book book)
         {
             var bookToUpdate = await GetBookByIdAsync(book.BookId);
-            _dataContext.Entry(bookToUpdate).CurrentValues.SetValues(book);
-
-            var updated = await _dataContext.SaveChangesAsync();
-            return updated > 0;
+             _dataContext.Entry(bookToUpdate).CurrentValues.SetValues(book);
+            return 1 > 0;
         }
 
-        public async Task<bool> CheckOutBookAsync(CheckOutActivity req)
+        public async Task<bool> CheckOutBookAsync(BooksActivity req)
         {
             await _dataContext.BookActivities.AddAsync(req);
-            int created = await _dataContext.SaveChangesAsync();
 
-            return created > 0;
+            return 1 > 0;
         }
 
-        public async Task<bool> CheckInBookAsync(CheckOutActivity req)
+        public async Task<bool> CheckInBookAsync(BooksActivity req)
         {
-                var bookActivity = await GetCheckOutActivityById(req.CheckOutActivityId);
-                _dataContext.Entry(bookActivity).CurrentValues.SetValues(req);
+            var bookActivity = await GetCheckOutActivityById(req.CheckOutActivityId);
+            _dataContext.Entry(bookActivity).CurrentValues.SetValues(req);
 
-                var checkedIn = await _dataContext.SaveChangesAsync();
-                return checkedIn > 0;
+            var checkedIn = await _dataContext.SaveChangesAsync();
+            return checkedIn > 0;
         }
 
-        public async Task<CheckOutActivity> GetCheckOutActivityById(int id)
+        public async Task<BooksActivity> GetCheckOutActivityById(int id)
         {
             return await _dataContext.BookActivities.FirstOrDefaultAsync(x => x.CheckOutActivityId == id);
         }
@@ -84,9 +68,7 @@ namespace Libraryhub.Service.ServiceImplementation
         public async Task<bool> PenalizeAsync(BookPenalty penalty)
         {
             await _dataContext.BookPenalties.AddAsync(penalty);
-            int created = await _dataContext.SaveChangesAsync();
-
-            return true;
+            return 1 > 0;
         }
 
         public async Task<IEnumerable<BookPenalty>> GetAllPenaltyChargiesAsync()
@@ -94,9 +76,47 @@ namespace Libraryhub.Service.ServiceImplementation
             return await _dataContext.BookPenalties.ToListAsync();
         }
 
-        public async Task<IEnumerable<BookPenalty>> GetPenaltyChargiesForCustomer(string userId)
+        public async Task<IEnumerable<BookPenalty>> GetPenaltyChargiesForCustomer(string customerId)
         {
-            return await _dataContext.BookPenalties.Where(x => x.UserId == userId).ToListAsync();
+            return await _dataContext.BookPenalties.Where(x => x.CustomerId == customerId).ToListAsync();
         }
+
+        public async Task<bool> BookExistAsync(Book book)
+        {
+            var boolValue = await _dataContext.Books
+                .AnyAsync(x => x.ISBN.ToLower().Trim() == book.ISBN.ToLower().Trim()
+                || x.PublishYear == book.PublishYear
+                && x.Title.ToLower().Trim() == book.Title.ToLower().Trim());
+
+            return boolValue;
+        }
+
+        public async Task CommitChangesAsync()
+        {
+            await _dataContext.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<BooksActivity>> GetAllCheckoutActivities()
+        {
+            return await _dataContext.BookActivities.ToListAsync();
+        }
+
+        public async Task<IEnumerable<BooksActivity>> GetCheckoutActivitiesByStatus(int status)
+        {
+            return await _dataContext.BookActivities.Where(x => x.Status == status).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Book>> GetListBooksByIDAsync(List<int> bookIds)
+        {
+            var requestedBooks = new List<Book>();
+            foreach(var bookId in bookIds)
+            {
+                var books = await GetBookByIdAsync(bookId);
+                requestedBooks.Add(books);
+            }
+            return requestedBooks;
+        }
+
     }
 }
+    

@@ -39,6 +39,7 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="FluentValidation" Version="9.0.0-preview3" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="9.0.0-preview3" />
+    <PackageReference Include="MailKit" Version="2.6.0" />
     <PackageReference Include="MediatR" Version="8.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.2" />
@@ -49,8 +50,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0-preview.1.20120.4" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.0" />
+    <PackageReference Include="MimeKit" Version="2.6.0" />
+    <PackageReference Include="Polly" Version="7.2.0" />
+    <PackageReference Include="Scrutor" Version="3.2.0" />
     <PackageReference Include="Serilog" Version="2.9.1-dev-01154" />
     <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.1.30" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.2.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.2.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.2.1" />

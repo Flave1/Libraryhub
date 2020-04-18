@@ -10,17 +10,22 @@ namespace Libraryhub.Service.Services
     {
         Task<IEnumerable<Book>> GetAllBooksAsync();
         Task<Book> GetBookByIdAsync(int bookId);
-        Task<Book> GetBookByTitleAsync(string title);
-        Task<Book> GetBookByISBNAsync(string isbn);
-        Task<IEnumerable<Book>> GetBookByStatusAsync(bool status);
         Task<bool> AddNewBookAsync(Book book);
         Task<bool> UpdateBookAsync(Book book);
+        Task<bool> BookExistAsync(Book book);
+        Task<IEnumerable<Book>> GetListBooksByIDAsync(List<int> bookIds);
 
-        Task<bool> CheckOutBookAsync(CheckOutActivity req);
-        Task<bool> CheckInBookAsync(CheckOutActivity req);
-        Task<CheckOutActivity> GetCheckOutActivityById(int id);
+        Task<bool> CheckOutBookAsync(BooksActivity req);
+        Task<bool> CheckInBookAsync(BooksActivity req);
+        Task<BooksActivity> GetCheckOutActivityById(int id);
+        Task<IEnumerable<BooksActivity>> GetAllCheckoutActivities();
+        Task<IEnumerable<BooksActivity>> GetCheckoutActivitiesByStatus(int status);
+
         Task<bool> PenalizeAsync(BookPenalty penalty);
         Task<IEnumerable<BookPenalty>> GetAllPenaltyChargiesAsync();
-        Task<IEnumerable<BookPenalty>> GetPenaltyChargiesForCustomer(string userId);
+        Task<IEnumerable<BookPenalty>> GetPenaltyChargiesForCustomer(string customerId);
+
+
+        Task CommitChangesAsync();
     }
 }

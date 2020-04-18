@@ -5,19 +5,9 @@ namespace Libraryhub.Contracts.Response
 {
     public class APIResponseStatus
     {
-        public bool IsSuccessful;
+        public bool IsSuccessful { get; set; } = false;
         public string CustomToken;
         public string CustomSetting;
-        public APIResponseMessage Message;
-    }
-
-    public class APIResponseMessage
-    {
-        public string FriendlyMessage;
-        public string TechnicalMessage;
-        public string MessageId;
-        public string SearchResultMessage;
-        public string ShortErrorMessage;
-
+        public APIResponseMessage Message { get; set; }
     }
 }

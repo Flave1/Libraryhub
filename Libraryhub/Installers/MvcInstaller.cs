@@ -1,20 +1,21 @@
-﻿using Libraryhub.Filters;
-using Libraryhub.Installers;
-using Libraryhub.Options; 
+﻿using Libraryhub.Filters; 
+using Libraryhub.Options;
 using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer; 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models; 
 using System.Collections.Generic;
 using System.Text;
 using Libraryhub.Service.Services;
-using Libraryhub.Service.ServiceImplementation;
+using Libraryhub.Service.ServiceImplementation; 
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.DependencyInjection.Extensions; 
+using Libraryhub.MailHandler.Service;
+using Libraryhub.Service.BackgroundTask;
 
 namespace Libraryhub.Installers
 {
@@ -40,7 +41,9 @@ namespace Libraryhub.Installers
             services.AddSingleton(tokenValidatorParameters);
 
             services.AddScoped<IUriService, UriService>();
+            services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IIdentityService, IdentityService>();
+            services.AddScoped<IAppSettingService, AppSettingService>();
 
             services
                 .AddMvc(options =>
@@ -68,7 +71,24 @@ namespace Libraryhub.Installers
                 var request = accessor.HttpContext.Request;
                 var absoluteUrl = string.Concat(request.Scheme, "://", request.Host.ToUriComponent(), "/");
                 return new UriService(absoluteUrl);
-            }); 
+            });
+
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+
+            services.AddHostedService<QueuedHostedService>();
+            services.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>(); 
+
+
+            //services.AddScoped<IUrlHelper>(x => {
+            //    var actionContext = x.GetRequiredService<IActionContextAccessor>().ActionContext;
+            //    var factory = x.GetRequiredService<IUrlHelperFactory>();
+            //    return factory.GetUrlHelper(actionContext);
+            //});
+
+            services.AddTransient<IEmailService, EmailService>();
+
+            services.AddSingleton<IEmailConfiguration>(configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
 
             services.AddSwaggerGen(x => {
                 x.SwaggerDoc("v1", new OpenApiInfo { Title = "Libraryhub", Version = "V1" });

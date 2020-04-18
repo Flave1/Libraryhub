@@ -28,15 +28,23 @@ namespace Libraryhub.Contracts.V1
             public const string UPDATE_BOOK_ENDPOINT = Base + "/book/UpdateBook/{bookId}";
             public const string DELETE_BOOK_ENDPOINT = Base + "/book/DeleteBook/{bookId}";
             public const string CREATE_BOOK_ENDPOINT = Base + "/book/CreateBook";
-            public const string LOAD_BOOK_BY_TITLE_ENDPOINT = Base + "/book/LoadBookByTitle";
-            public const string LOAD_BOOK_BY_ISBN_ENDPOINT = Base + "/book/LoadBookByISBN";
-            public const string LOAD_BOOK_BY_STATUS_ENDPOINT = Base + "/book/LoadBookByStatus";
+            public const string BOOK_SEARCH_ENDPOINT = Base + "/book/Search";
 
             public const string CHECK_OUT_BOOKS_ENDPOINT = Base + "/book/CheckOutBooks";
             public const string CHECK_IN_BOOKS_ENDPOINT = Base + "/book/CheckInBooks";
 
             public const string GET_ALL_BOOK_PEANALTY_CHARGIES_ENDPOINT = Base + "/book/GetAllPenaltyChargies";
             public const string GET_CUSTOMER_PENALTY_CHARGIES_ENDPOINT = Base + "/book/GetCustomerPenaltyChargies";
+        }
+
+        public static class Settings
+        {
+            public const string CHECKOUT_REMINDER_ENDPOINT = Base + "/reminder/Switch";
+        }
+
+        public static class Order
+        {
+            public const string ORDER_ENDPOINT = Base + "/order/CreateOrder";
         }
 
     }

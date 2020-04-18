@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Libraryhub.DomainObjs
 {
-    public class BookPenalty
+    public class BookPenalty : Admin
     {
         public int BookPenaltyId { get; set; }
         [Required(ErrorMessage = "PenaltyFee is required")]
@@ -21,6 +21,6 @@ namespace Libraryhub.DomainObjs
         [Required(ErrorMessage = "Expected Return Date is required")]
         [DataType(DataType.Date)]
         public DateTime ExpectedReturnDate { get; set; } 
-        public string UserId { get; set; }
+        public string CustomerId { get; set; }
     }
 }

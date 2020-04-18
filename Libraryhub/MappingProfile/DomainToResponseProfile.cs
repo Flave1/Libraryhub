@@ -12,14 +12,18 @@ namespace Libraryhub.MappingProfile
     {
         public DomainToResponseProfile()
         {
-            CreateMap<Book, BookResponseObj>()
+            CreateMap<Book, BookObj>()
                 .ForMember(dest => dest.CheckOutActivities, opt => opt.MapFrom(src => src.CheckOutActivities));
 
-            CreateMap<CheckOutActivity, CheckOutActivityObj>();
+            CreateMap<BooksActivity, CheckOutActivityObj>();
 
-            CreateMap<CheckOutActivity, CheckOutActivityResponseObj>();
+            CreateMap<BooksActivity, CheckOutActivityResponseObj>();
 
-            CreateMap<BookPenalty, PenaltyChargeResponseObj>();
+            CreateMap<BookPenalty, BookPenaltyObj>();
+
+            CreateMap<Order, OrderObj>();
+
+            CreateMap<OrderItem, OrderedBooks>();
         }
     }
 }

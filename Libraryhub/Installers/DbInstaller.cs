@@ -22,6 +22,7 @@ namespace Libraryhub.Installers
                    options.UseSqlServer(
                        configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IBookService, BookService>();
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddRoles<IdentityRole>()

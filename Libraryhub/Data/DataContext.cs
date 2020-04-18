@@ -15,8 +15,10 @@ namespace Libraryhub.Data
         {
         }
         public DbSet<Book> Books { get; set; }
-        public DbSet<CheckOutActivity> BookActivities { get; set; }
-        public DbSet<RefreshToken> RefreshTokens { get; set; } 
+        public DbSet<BooksActivity> BookActivities { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<BookPenalty> BookPenalties { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

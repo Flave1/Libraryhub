@@ -12,7 +12,8 @@ namespace Libraryhub.Validators
         public AddCheckOutActivityRequestObjValidator()
         {
             RuleFor(x => x.BookId).NotEmpty();
-            RuleFor(x => x.UserId).NotEmpty(); 
+            RuleFor(x => x.CustomerId).NotEmpty();
+            RuleFor(x => x.AdminUserId).NotEmpty();
         }
     }
 }

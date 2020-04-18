@@ -1,5 +1,4 @@
-﻿ 
-using Microsoft.AspNetCore.Builder; 
+﻿using Microsoft.AspNetCore.Builder; 
 using Microsoft.AspNetCore.Hosting; 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,19 +31,18 @@ namespace Libraryhub
         } 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
         {
-           
+             var loggerSetting = new Logging();
+            Configuration.GetSection(nameof(Logging)).Bind(loggerSetting);
+            if (loggerSetting.Enable) { loggerFactory.AddFile("Logs/flavehubLogs-{Date}.txt"); }
+
             app.Use(async (ctx, next) => {
                 await next();
                 if (ctx.Response.StatusCode == 204)
                 {
                     ctx.Response.ContentLength = 0;
                 }
-
             });
-            var loggerSetting = new Logging();
-            Configuration.GetSection(nameof(Logging)).Bind(loggerSetting);
-            if (loggerSetting.Enable) { loggerFactory.AddFile("Logs/flavehubLogs-{Date}.txt"); }
-
+          
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -67,7 +65,6 @@ namespace Libraryhub
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
 
             app.UseAuthentication();
 
@@ -94,7 +91,7 @@ namespace Libraryhub
         {
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var UserManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-            string[] roleNames = { "Admin", "User" }; 
+            string[] roleNames = { "Admin", "Customer" }; 
             IdentityResult roleResult;
 
             foreach (var roleName in roleNames)

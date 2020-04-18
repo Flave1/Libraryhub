@@ -6,10 +6,10 @@ using System.Text;
 
 namespace Libraryhub.Contracts.Queries
 {
-    public class GetAllPenaltyChargeQuery : IRequest<List<PenaltyChargeResponseObj>> { }
-    public class GetCustomerPenaltyChargiesQuery : IRequest<List<PenaltyChargeResponseObj>>
+    public class GetAllPenaltyChargeQuery : IRequest<PenaltyChargeResponseObj> { }
+    public class GetCustomerPenaltyChargiesQuery : IRequest<PenaltyChargeResponseObj>
     {
-        public string UserId { get; }
-        public GetCustomerPenaltyChargiesQuery(string userId) { UserId = userId; }
+        public string CustomerId { get; }
+        public GetCustomerPenaltyChargiesQuery(string customerId) { CustomerId = customerId; }
     }
 }

@@ -8,5 +8,6 @@ namespace Libraryhub.Service.Services
      public interface IUriService
     {
         Uri GetBookUri(string postId);
+        Uri GetUri();
     }
 }

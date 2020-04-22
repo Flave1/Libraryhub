@@ -96,7 +96,7 @@ namespace Libraryhub.MailHandler.Service
             catch (SocketException ex)
             {
                 var errorId = ErrorID.Generate(4);
-                _logger.LogInformation($"EmailService {errorId}", $"Error Message{ ex.Message}");
+                _logger.LogInformation($"EmailService {errorId}", $"Error Message{ ex?.Message}");
                 throw ex;
             }
         }

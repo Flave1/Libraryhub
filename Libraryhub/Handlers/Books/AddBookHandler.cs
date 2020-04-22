@@ -4,6 +4,7 @@ using Libraryhub.Contracts.RequestObjs;
 using Libraryhub.Contracts.Response;
 using Libraryhub.CustomError;
 using Libraryhub.DomainObjs;
+using Libraryhub.ErrorHandler;
 using Libraryhub.Service.Services;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -28,22 +29,35 @@ namespace Libraryhub.Handlers.Books
         {
             try
             {
+                #region Buid book domain object
+
                 var book = new Book
                 {
                     CoverPrice = request.CoverPrice,
                     IsAvailable = true,
                     ISBN = request.ISBN,
                     PublishYear = request.PublishYear,
-                    Title = request.Title, 
+                    Title = request.Title,
                     Quantity = request.Quantity,
-                    InitialQuantity = request.Quantity
+                    InitialQuantity = request.Quantity,
+                    AccessionNo = request.AccessionNo,
+                    Author = request.Author,
+                    ClassificationNo = request.ClassificationNo,
+                    Color = request.Color,
+                    Language = request.Language,
+                    Section = request.Section,
+                    Size = request.Size
                 };
+
+                #endregion
+
+                #region Check if book exist by Title ISBN and pubished year
 
                 var bookExist = await _bookService.BookExistAsync(book);
                 if (bookExist)
                 {
                     return new RegBookResponseObj
-                    { 
+                    {
                         Status = new APIResponseStatus
                         {
                             IsSuccessful = false,
@@ -55,6 +69,10 @@ namespace Libraryhub.Handlers.Books
                     };
                 }
 
+                #endregion
+
+                #region Add book
+                 
                 await _bookService.AddNewBookAsync(book);
 
                 return new RegBookResponseObj
@@ -65,11 +83,28 @@ namespace Libraryhub.Handlers.Books
                         IsSuccessful = true
                     }
                 };
+
+                #endregion
             }
             catch (Exception ex)
             {
-                _logger.LogInformation("Internal error", ex.InnerException.Message);
-                throw new NotImplementedException("Internal error", ex);
+                #region Log Error with errorId and return error resonse 
+                var errorId = ErrorID.Generate(4);
+                _logger.LogInformation($"CheckInHandler{errorId}", $"Error Message{ ex.InnerException?.Message ?? ex?.Message}");
+                return new RegBookResponseObj
+                {
+                    Status = new APIResponseStatus
+                    {
+                        IsSuccessful = false,
+                        Message = new APIResponseMessage
+                        {
+                            FriendlyMessage = " Unable to process request please contact admin",
+                            MessageId = $"CheckInHandler{errorId}",
+                            TechnicalMessage = ex.InnerException?.Message ?? ex?.Message
+                        }
+                    }
+                };
+                #endregion
             }
         }
     }

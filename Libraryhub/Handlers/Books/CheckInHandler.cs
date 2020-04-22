@@ -5,7 +5,8 @@ using Libraryhub.Contracts.Response;
 using Libraryhub.DomainObjs;
 using Libraryhub.ErrorHandler;
 using Libraryhub.Service.Services;
-using MediatR; 
+using MediatR;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using System; 
 using System.Threading;
@@ -28,6 +29,8 @@ namespace Libraryhub.Handlers.Books
         {
             try
             {
+                #region Check if the book to be checked in is available and has a book activity with status CHECKEDOUT
+
                 var thisBook = await _bookService.GetBookByIdAsync(request.BookId);
                 if (thisBook == null)
                 {
@@ -60,7 +63,7 @@ namespace Libraryhub.Handlers.Books
                 }
 
                 var currentCheckedOutBook = await _bookService.GetCheckOutActivityById(request.CheckOutActivityId);
-                if(currentCheckedOutBook == null)
+                if (currentCheckedOutBook == null)
                 {
                     return new CheckOutActivityResponseObj
                     {
@@ -89,12 +92,15 @@ namespace Libraryhub.Handlers.Books
                         }
                     };
                 }
+                #endregion
 
-                var checkInReq = BuildCheckInRequestObject(currentCheckedOutBook, request);
+                #region Check if customer exceeded the expected date to return this book and also penalize customer
 
-                if (request.ReturnDate.AddDays(1) > currentCheckedOutBook.ExpectedReturnDate)
-                { 
-                    var lateDays = Convert.ToInt64((request.ReturnDate.AddDays(1) - currentCheckedOutBook.ExpectedReturnDate).TotalDays);
+                var checkInReq = BuildCheckInDomainObject(currentCheckedOutBook, request);
+
+                if (request.ReturnDate > currentCheckedOutBook.ExpectedReturnDate)
+                {
+                    var lateDays = Convert.ToInt64((request.ReturnDate - currentCheckedOutBook.ExpectedReturnDate).TotalDays);
                     var penaltyFee = 200 * lateDays;
 
 
@@ -120,42 +126,86 @@ namespace Libraryhub.Handlers.Books
                                 IsSuccessful = false,
                                 Message = new APIResponseMessage
                                 {
-                                    FriendlyMessage = $"Customer expected to pay a penalty fee of {penaltyFee} for {Convert.ToInt64(lateDays)} day(s) late return not {request.PenaltyFee}"
+                                    FriendlyMessage = $"Customer expected to pay a penalty fee of {penaltyFee} for {lateDays} day(s) late return not {request.PenaltyFee}"
                                 }
                             }
                         };
                     }
 
-                    var penaltyReq = BuildPenaltyRequestObject(currentCheckedOutBook, request, penaltyFee, lateDays);
+                    var penaltyObject = BuildPenaltyDomainObject(currentCheckedOutBook, request, penaltyFee, lateDays);
 
-                    await _bookService.PenalizeAsync(penaltyReq);
+                    using (var _transaction = _bookService.Context().Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            await _bookService.PenalizeAsync(penaltyObject);
 
-                    thisBook.IsAvailable = true;
-                    thisBook.Quantity = thisBook.Quantity + 1;
-                    await _bookService.UpdateBookAsync(thisBook);
+                            thisBook.IsAvailable = true;
+                            thisBook.Quantity = thisBook.Quantity + 1;
+                            await _bookService.UpdateBookAsync(thisBook);
+                            await _bookService.SaveChangesAsync();
 
-                    await _bookService.CheckInBookAsync(checkInReq);
+                            await _bookService.CheckInBookAsync(checkInReq);
+                            await _bookService.SaveChangesAsync();
+                            await _transaction.CommitAsync();
+                           
+                        }
+                        catch (SqlException ex)
+                        {
+                            #region Log Error with errorId and return error resonse 
+
+                            await _transaction.RollbackAsync();
+                            var errorId = ErrorID.Generate(4);
+                            _logger.LogInformation($"CheckOutBookHandler{errorId}", $"Error Message{ ex.InnerException?.Message ?? ex?.Message}");
+                            return new CheckOutActivityResponseObj
+                            {
+                                Status = new APIResponseStatus
+                                {
+                                    IsSuccessful = false,
+                                    Message = new APIResponseMessage
+                                    {
+                                        FriendlyMessage = "Something went wrong",
+                                        MessageId = $"CheckOutBookHandler{errorId}",
+                                        TechnicalMessage = ex.InnerException?.Message ?? ex?.Message
+                                    }
+                                }
+                            };
+                            #endregion
+                        }
+                        finally
+                        {
+                            await _transaction.DisposeAsync();
+                        }
+
+                    }
+
                     return new CheckOutActivityResponseObj
                     {
                         CheckOutActivityId = checkInReq.CheckOutActivityId,
                         Status = new APIResponseStatus { IsSuccessful = true }
                     };
-
-
                 }
+                #endregion
+
+                #region Save changes if customer did not exceed expected date of return
+
                 await _bookService.CheckInBookAsync(checkInReq);
+                await _bookService.SaveChangesAsync();
                 return new CheckOutActivityResponseObj
                 {
                     CheckOutActivityId = checkInReq.CheckOutActivityId,
                     Status = new APIResponseStatus { IsSuccessful = true }
                 };
+
+                #endregion
             }
             catch (Exception ex)
             {
+                #region Log Error with errorId and return error resonse 
                 var errorId = ErrorID.Generate(4);
-                _logger.LogInformation( $"CheckInHandler{errorId}", $"Error Message{ ex.InnerException.Message}");
+                _logger.LogInformation($"CheckInHandler{errorId}", $"Error Message{ ex.InnerException?.Message ?? ex?.Message}");
                 return new CheckOutActivityResponseObj
-                { 
+                {
                     Status = new APIResponseStatus
                     {
                         IsSuccessful = false,
@@ -163,14 +213,17 @@ namespace Libraryhub.Handlers.Books
                         {
                             FriendlyMessage = " Something went wrong",
                             MessageId = $"CheckInHandler{errorId}",
-                            TechnicalMessage = ex.InnerException.Message
+                            TechnicalMessage = ex.InnerException?.Message ?? ex?.Message
                         }
                     }
                 };
+                #endregion
             }
         }
 
-        private BooksActivity BuildCheckInRequestObject(BooksActivity currentCheckedOutBook, CheckInCommand request)
+        #region Build domain objects
+
+        private BooksActivity BuildCheckInDomainObject(BooksActivity currentCheckedOutBook, CheckInCommand request)
         {
             var checkInReq = new BooksActivity
             {
@@ -191,7 +244,7 @@ namespace Libraryhub.Handlers.Books
             return checkInReq;
         }
 
-        private BookPenalty BuildPenaltyRequestObject(BooksActivity currentCheckedOutBook, CheckInCommand request, decimal penaltyFee, long lateDays)
+        private BookPenalty BuildPenaltyDomainObject(BooksActivity currentCheckedOutBook, CheckInCommand request, decimal penaltyFee, long lateDays)
         {
             var penaltyReq = new BookPenalty
             {
@@ -205,5 +258,7 @@ namespace Libraryhub.Handlers.Books
             };
             return penaltyReq;
         }
+
+        #endregion
     }
 }

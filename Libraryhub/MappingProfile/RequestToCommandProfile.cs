@@ -16,6 +16,9 @@ namespace Libraryhub.MappingProfile
             CreateMap<AddCheckOutActivityRequestObj, CheckOutCommand>();
             CreateMap<EditCheckOutActivityRequestObj, CheckInCommand>();
             CreateMap<OrderObj, OrderCommand>();
+            CreateMap<OrderDetailsSearch, OrderDetailsSearchCommand>();
+            CreateMap<ConfirmOrder, ConfirmOrderCommand>();
+            CreateMap<OrderDetailsSearch, OrderDetailsSearchCommand>();
         }
     }
 }

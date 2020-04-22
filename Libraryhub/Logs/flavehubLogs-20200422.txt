@@ -1,0 +1,39 @@
+2020-04-22T01:10:12.7291114+01:00 80000018-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-22T01:10:24.1884668+01:00 8000000c-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-22T01:10:25.9106465+01:00 8000000c-0001-fd00-b63f-84710c7967bb [INF] Request finished in 5201.6618ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-22T01:10:29.1110119+01:00 80000018-0000-fc00-b63f-84710c7967bb [INF] Request finished in 13572.619700000001ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-22T01:10:48.4515160+01:00 8000000e-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-22T01:11:00.2297830+01:00 8000000e-0001-fd00-b63f-84710c7967bb [INF] Request finished in 8414.1116ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-22T01:11:54.6317561+01:00 8000001a-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 PUT https://localhost:44382/api/v1/reminder/switch/customerReminder?SwitchValue=1  0 (ca22a1cb)
+2020-04-22T01:11:54.9189257+01:00 8000001a-0000-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"CheckoutReminder\", controller = \"ApplicationSetting\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.EmailResponseObj]] CheckoutReminder(Int32)" on controller "Libraryhub.Controllers.V1.ApplicationSettingController" ("Libraryhub"). (122b2fdf)
+2020-04-22T01:12:02.0051748+01:00 8000001a-0000-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.EmailResponseObj"'. (8a1b66c8)
+2020-04-22T01:12:05.9549786+01:00 8000001a-0000-fc00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.ApplicationSettingController.CheckoutReminder (Libraryhub)" in 7489.0106000000005ms (afa2e885)
+2020-04-22T01:12:06.5249142+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-22T01:12:06.8057593+01:00 8000001a-0000-fc00-b63f-84710c7967bb [INF] Request finished in 13027.6977ms 200 application/json; charset=utf-8 (791a596a)
+2020-04-22T01:12:14.0907345+01:00 8000001c-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 PUT https://localhost:44382/api/v1/reminder/switch/leftOverReminder?SwitchValue=1  0 (ca22a1cb)
+2020-04-22T01:12:20.2951543+01:00 8000001c-0000-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"LeftOverReminder\", controller = \"ApplicationSetting\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.EmailResponseObj]] LeftOverReminder(Int32)" on controller "Libraryhub.Controllers.V1.ApplicationSettingController" ("Libraryhub"). (122b2fdf)
+2020-04-22T01:12:23.8059553+01:00 8000001c-0000-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.EmailResponseObj"'. (8a1b66c8)
+2020-04-22T01:12:24.9821273+01:00  [INF] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[CheckOutActivityId], [b].[AdminUserId], [b].[BookId], [b].[CheckOutDate], [b].[CustomerId], [b].[Email], [b].[ExpectedReturnDate], [b].[FullName], [b].[NationalIdentificationNumber], [b].[PhoneNumber], [b].[ReturnDate], [b].[Status]
+FROM [BookActivities] AS [b]
+WHERE [b].[Status] = 1" (65d11854)
+2020-04-22T01:12:33.8772644+01:00 8000001c-0000-fc00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.ApplicationSettingController.LeftOverReminder (Libraryhub)" in 4042.146ms (afa2e885)
+2020-04-22T01:12:35.7799407+01:00 8000001c-0000-fc00-b63f-84710c7967bb [INF] Request finished in 20730.2298ms 200 application/json; charset=utf-8 (791a596a)
+2020-04-22T01:12:45.0308447+01:00  [INF] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]" (65d11854)
+2020-04-22T01:12:53.0375074+01:00  [INF] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[BookId] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-22T01:12:54.0195332+01:00  [INF] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[BookId] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-22T01:12:54.1887011+01:00  [INF] Queued Background Task "73e4e0ff-b07c-460d-8b5d-523a3f9c2871" is complete. (1d1ef826)
+2020-04-22T01:12:54.4240104+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-22T01:12:54.5376728+01:00  [INF] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Quantity] <= 2" (65d11854)
+2020-04-22T01:13:59.1371590+01:00  [INF] EmailService DR0P (556b48f3)

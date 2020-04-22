@@ -25,6 +25,7 @@ namespace Libraryhub.DomainObjs
         [Required(AllowEmptyStrings = false, ErrorMessage = "Quantity of books is required")]
         public int Quantity { get; set; }
         public int InitialQuantity { get; set; }
+        public int QuantitySold { get; set; }
         public virtual List<BooksActivity> CheckOutActivities { get; set; }
 
         //FOR SEARCH

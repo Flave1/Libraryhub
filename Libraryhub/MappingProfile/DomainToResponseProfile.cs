@@ -24,6 +24,8 @@ namespace Libraryhub.MappingProfile
             CreateMap<Order, OrderObj>();
 
             CreateMap<OrderItem, OrderedBooks>();
+
+            CreateMap<OrderDetail, OrderDetailObj>(); 
         }
     }
 }

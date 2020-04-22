@@ -10,6 +10,8 @@ namespace Libraryhub.DomainObjs
     {
         public int OrderId { get; set; }
         public string CustomerId { get; set; }
+        public int TotalQuantity { get; set; }
+        public decimal GrandPrice { get; set; }
         public List<OrderItem> OrderItems { get; set; }
     }
 }

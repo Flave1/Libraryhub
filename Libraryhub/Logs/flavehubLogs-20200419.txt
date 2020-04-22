@@ -1,0 +1,842 @@
+2020-04-19T12:41:30.5588942+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-19T12:41:40.5832088+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T12:41:42.3037790+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T12:41:42.4858367+01:00  [WRN] No type was specified for the decimal column '"GrandPrice"' on entity type '"Order"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T12:41:42.6379213+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"OrderItem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T12:41:43.3110762+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T12:42:04.2937145+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T12:42:06.5163311+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T12:42:06.7222177+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-19T12:42:09.9849127+01:00  [INF] Queued Hosted Service is starting. (cb05eba7)
+2020-04-19T12:42:11.9772853+01:00 8000008a-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-19T12:42:13.5308228+01:00 8000008a-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T12:42:17.5475016+01:00 8000008a-0000-fb00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T12:42:17.6163549+01:00 8000008a-0000-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T12:42:18.1231821+01:00 8000008a-0000-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 4526.5433ms (afa2e885)
+2020-04-19T12:42:18.3574675+01:00 8000008a-0000-fb00-b63f-84710c7967bb [INF] Request finished in 6400.7801ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-19T12:42:29.9800754+01:00 8000008c-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-19T12:42:30.2748912+01:00 8000008c-0000-fb00-b63f-84710c7967bb [INF] Request finished in 656.6917000000001ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-19T12:42:32.8062616+01:00 8000008e-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-19T12:42:35.3826222+01:00 8000008e-0000-fb00-b63f-84710c7967bb [INF] Request finished in 803.9885ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-19T12:48:18.1528014+01:00 80000090-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/details  0 (ca22a1cb)
+2020-04-19T12:48:18.2598761+01:00 80000090-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllDetails\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.OrderDetailResponseObj]] GetAllDetails()" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T12:48:23.5095541+01:00 80000090-0000-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.GetAllDetails (Libraryhub)" in 5229.3646ms (afa2e885)
+2020-04-19T12:48:24.3768128+01:00 80000090-0000-fb00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Handler was not found for request of type MediatR.IRequestHandler`2[Libraryhub.Contracts.Queries.OrderDetailQuery,Libraryhub.Contracts.RequestObjs.OrderDetailResponseObj]. Register your handlers with the container. See the samples in GitHub for examples.
+   at MediatR.Internal.RequestHandlerBase.GetHandler[THandler](ServiceFactory factory)
+   at MediatR.Internal.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Libraryhub.Controllers.V1.OrderController.GetAllDetails() in C:\Apps\Libraryhub\Libraryhub\Controllers\V1\OrderController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-04-19T12:48:24.8570245+01:00 80000090-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T12:48:25.6633336+01:00 80000090-0000-fb00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T12:48:25.6864464+01:00 80000090-0000-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T12:48:26.1271511+01:00 80000090-0000-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 918.2881000000001ms (afa2e885)
+2020-04-19T12:48:27.0709616+01:00 80000090-0000-fb00-b63f-84710c7967bb [INF] Request finished in 7994.7484ms 500 application/json; charset=utf-8 (791a596a)
+2020-04-19T12:58:39.2985177+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-19T12:58:50.7205023+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T12:58:50.7420607+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T12:58:50.7593612+01:00  [WRN] No type was specified for the decimal column '"GrandPrice"' on entity type '"Order"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T12:58:50.7732255+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"OrderItem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T12:58:50.9397305+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T12:58:57.3770629+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T12:59:01.4230955+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T12:59:01.5289087+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-19T12:59:02.4455682+01:00  [INF] Queued Hosted Service is starting. (cb05eba7)
+2020-04-19T12:59:02.8330375+01:00 800000fb-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-19T12:59:04.0846734+01:00 800000fb-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T12:59:09.1850877+01:00 800000fb-0001-fc00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T12:59:09.3285396+01:00 800000fb-0001-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T12:59:09.7517301+01:00 800000fb-0001-fc00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 5349.6327ms (afa2e885)
+2020-04-19T12:59:11.5461845+01:00 800000fb-0001-fc00-b63f-84710c7967bb [INF] Request finished in 7253.613ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-19T12:59:19.1345813+01:00 800000fd-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-19T12:59:19.3132184+01:00 800000fd-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1240.7914ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-19T12:59:19.8812132+01:00 800000ff-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-19T12:59:20.5072057+01:00 800000ff-0001-fc00-b63f-84710c7967bb [INF] Request finished in 624.981ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-19T12:59:44.8104434+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/details  0 (ca22a1cb)
+2020-04-19T12:59:44.8505102+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllDetails\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.OrderDetailResponseObj]] GetAllDetails()" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T12:59:49.1822942+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T12:59:49.3416085+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]" (65d11854)
+2020-04-19T12:59:49.6493046+01:00 80000092-0000-fb00-b63f-84710c7967bb [ERR] Failed executing DbCommand ("228"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]" (627a98df)
+2020-04-19T12:59:49.9478614+01:00 80000092-0000-fb00-b63f-84710c7967bb [ERR] An exception occurred while iterating over the results of a query for context type '"Libraryhub.Data.DataContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'OrderDetails'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b989960a-f15d-4998-a1ca-f6a477275de6
+Error Number:208,State:1,Class:16" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'OrderDetails'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Libraryhub.Service.ServiceImplementation.OrderService.GetAllOrderDetails() in C:\Apps\Libraryhub\Libraryhub\Service\ServiceImplementation\OrderService.cs:line 38
+   at Libraryhub.Handlers.Orders.OrderDetailQueryHandler.Handle(OrderDetailQuery request, CancellationToken cancellationToken) in C:\Apps\Libraryhub\Libraryhub\Handlers\Orders\OrderDetailQueryHandler.cs:line 26
+ClientConnectionId:b989960a-f15d-4998-a1ca-f6a477275de6
+Error Number:208,State:1,Class:16
+2020-04-19T12:59:55.2033400+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.GetAllDetails (Libraryhub)" in 10346.099400000001ms (afa2e885)
+2020-04-19T12:59:55.3272371+01:00 80000092-0000-fb00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'OrderDetails'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Libraryhub.Service.ServiceImplementation.OrderService.GetAllOrderDetails() in C:\Apps\Libraryhub\Libraryhub\Service\ServiceImplementation\OrderService.cs:line 38
+   at Libraryhub.Handlers.Orders.OrderDetailQueryHandler.Handle(OrderDetailQuery request, CancellationToken cancellationToken) in C:\Apps\Libraryhub\Libraryhub\Handlers\Orders\OrderDetailQueryHandler.cs:line 26
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Libraryhub.Controllers.V1.OrderController.GetAllDetails() in C:\Apps\Libraryhub\Libraryhub\Controllers\V1\OrderController.cs:line 32
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+ClientConnectionId:b989960a-f15d-4998-a1ca-f6a477275de6
+Error Number:208,State:1,Class:16
+2020-04-19T12:59:55.3794845+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T12:59:56.2149506+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T12:59:56.2308016+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T12:59:56.3171703+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 865.0661ms (afa2e885)
+2020-04-19T12:59:56.3570056+01:00 80000092-0000-fb00-b63f-84710c7967bb [INF] Request finished in 11541.4516ms 500 application/json; charset=utf-8 (791a596a)
+2020-04-19T13:03:18.0594641+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-19T13:03:25.8514693+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T13:03:25.8998569+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T13:03:25.9140327+01:00  [WRN] No type was specified for the decimal column '"GrandPrice"' on entity type '"Order"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T13:03:25.9364482+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"OrderItem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T13:03:26.4725974+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T13:03:40.0705446+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T13:03:42.4855613+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T13:03:43.2274283+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-19T13:03:43.5928861+01:00  [INF] Queued Hosted Service is starting. (cb05eba7)
+2020-04-19T13:03:49.2461251+01:00 80000153-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-19T13:03:53.6934497+01:00 80000153-0000-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T13:03:53.8243664+01:00 80000153-0000-fe00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T13:03:53.8436501+01:00 80000153-0000-fe00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T13:03:54.0103427+01:00 80000153-0000-fe00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 234.2196ms (afa2e885)
+2020-04-19T13:03:54.0345822+01:00 80000153-0000-fe00-b63f-84710c7967bb [INF] Request finished in 5361.4094000000005ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-19T13:04:00.4079395+01:00 80000155-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-19T13:04:00.5713020+01:00 80000155-0000-fe00-b63f-84710c7967bb [INF] Request finished in 156.4283ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-19T13:04:03.2734763+01:00 80000026-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-19T13:04:04.9408016+01:00 80000026-0001-fb00-b63f-84710c7967bb [INF] Request finished in 3501.911ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-19T13:04:22.5176648+01:00 80000028-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/details  0 (ca22a1cb)
+2020-04-19T13:04:22.5581012+01:00 80000028-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllDetails\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.OrderDetailResponseObj]] GetAllDetails()" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T13:04:23.5725382+01:00 80000028-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T13:04:23.8187734+01:00 80000028-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]" (65d11854)
+2020-04-19T13:04:24.1936113+01:00 80000028-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.OrderDetailResponseObj"'. (8a1b66c8)
+2020-04-19T13:04:24.2197472+01:00 80000028-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.GetAllDetails (Libraryhub)" in 1649.9268000000002ms (afa2e885)
+2020-04-19T13:04:24.2533108+01:00 80000028-0001-fb00-b63f-84710c7967bb [INF] Request finished in 2111.6507ms 200 application/json; charset=utf-8 (791a596a)
+2020-04-19T13:04:59.1209676+01:00 8000002a-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/DetailsSearch application/json 80 (ca22a1cb)
+2020-04-19T13:04:59.1978416+01:00 8000002a-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"OrderDetailsSearch\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.OrderDetailResponseObj]] OrderDetailsSearch(Libraryhub.Contracts.RequestObjs.OrderDetailsSearch)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T13:04:59.4614824+01:00 8000002a-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T13:04:59.4808412+01:00 8000002a-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]" (65d11854)
+2020-04-19T13:04:59.5340343+01:00 8000002a-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderDetailId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderDetailId] = @__orderDetailId_0) AND @__orderDetailId_0 IS NOT NULL" (65d11854)
+2020-04-19T13:04:59.6172073+01:00 8000002a-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.OrderDetailResponseObj"'. (8a1b66c8)
+2020-04-19T13:04:59.6657152+01:00 8000002a-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.OrderDetailsSearch (Libraryhub)" in 422.51820000000004ms (afa2e885)
+2020-04-19T13:04:59.6790335+01:00 8000002a-0001-fb00-b63f-84710c7967bb [INF] Request finished in 619.6544ms 200 application/json; charset=utf-8 (791a596a)
+2020-04-19T13:24:24.2560049+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-19T13:24:52.8303462+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T13:24:54.1466872+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T13:24:54.1822625+01:00  [WRN] No type was specified for the decimal column '"GrandPrice"' on entity type '"Order"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T13:24:54.2123459+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"OrderItem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T13:24:56.1250589+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T13:25:24.5867174+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T13:25:29.2554442+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T13:25:30.6015950+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-19T13:25:36.1844327+01:00  [INF] Queued Hosted Service is starting. (cb05eba7)
+2020-04-19T13:25:43.8538556+01:00 80000159-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-19T13:25:43.8650365+01:00 80000157-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-19T13:25:49.9839544+01:00 80000159-0000-fe00-b63f-84710c7967bb [INF] Request finished in 5900.3997ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-19T13:25:54.2638978+01:00 80000157-0000-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T13:25:54.4005424+01:00 8000015b-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-19T13:25:55.8299884+01:00 80000157-0000-fe00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T13:25:55.9903466+01:00 80000157-0000-fe00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T13:25:56.0800200+01:00 8000015b-0000-fe00-b63f-84710c7967bb [INF] Request finished in 1799.0696ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-19T13:25:56.4780333+01:00 80000157-0000-fe00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 1880.7698ms (afa2e885)
+2020-04-19T13:25:59.8602794+01:00 80000157-0000-fe00-b63f-84710c7967bb [INF] Request finished in 12904.946300000001ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-19T13:27:14.8638576+01:00 8000002c-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/createOrder application/json 117 (ca22a1cb)
+2020-04-19T13:27:15.0384393+01:00 8000002c-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"CheckInBook\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] CheckInBook(Libraryhub.Contracts.RequestObjs.OrderObj)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T13:27:21.1799025+01:00 8000002c-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T13:27:21.4984231+01:00 8000002c-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T13:27:22.5732409+01:00 8000002c-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T13:27:22.6151345+01:00 8000002c-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.CheckInBook (Libraryhub)" in 7561.173400000001ms (afa2e885)
+2020-04-19T13:27:22.6686387+01:00 8000002c-0001-fb00-b63f-84710c7967bb [INF] Request finished in 9180.8399ms 400 application/json; charset=utf-8 (791a596a)
+2020-04-19T13:28:33.4226354+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/createOrder application/json 117 (ca22a1cb)
+2020-04-19T13:28:33.5531505+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"CheckInBook\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] CheckInBook(Libraryhub.Contracts.RequestObjs.OrderObj)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T13:28:34.0393369+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T13:28:34.3256126+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T13:28:38.5756196+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Orders] ([CustomerId], [GrandPrice], [TotalQuantity])
+VALUES (@p0, @p1, @p2);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();" (65d11854)
+2020-04-19T13:28:39.7873035+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderItems] ([BookId], [CoverPrice], [OrderId], [Quantity])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [OrderItemId]
+FROM [OrderItems]
+WHERE @@ROWCOUNT = 1 AND [OrderItemId] = scope_identity();" (65d11854)
+2020-04-19T13:28:40.1854129+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T13:28:40.3735038+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Books] SET [Quantity] = @p0
+WHERE [BookId] = @p1;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T13:28:41.4465073+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderDetails] ([CustomerId], [DateDelivered], [DateOrdered], [OrderId], [OrderStatus])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderDetailId]
+FROM [OrderDetails]
+WHERE @@ROWCOUNT = 1 AND [OrderDetailId] = scope_identity();" (65d11854)
+2020-04-19T13:28:44.6907430+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T13:28:45.3832320+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.CheckInBook (Libraryhub)" in 11228.8235ms (afa2e885)
+2020-04-19T13:28:45.9466489+01:00 8000002e-0001-fb00-b63f-84710c7967bb [INF] Request finished in 12034.8479ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T13:32:59.5082940+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/createOrder application/json 118 (ca22a1cb)
+2020-04-19T13:32:59.5646920+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"CheckInBook\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] CheckInBook(Libraryhub.Contracts.RequestObjs.OrderObj)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T13:32:59.6645167+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T13:32:59.6874271+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T13:32:59.9194443+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Orders] ([CustomerId], [GrandPrice], [TotalQuantity])
+VALUES (@p0, @p1, @p2);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();" (65d11854)
+2020-04-19T13:32:59.9374553+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderItems] ([BookId], [CoverPrice], [OrderId], [Quantity])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [OrderItemId]
+FROM [OrderItems]
+WHERE @@ROWCOUNT = 1 AND [OrderItemId] = scope_identity();" (65d11854)
+2020-04-19T13:32:59.9519005+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T13:32:59.9591701+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Books] SET [Quantity] = @p0, [QuantitySold] = @p1
+WHERE [BookId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T13:33:00.0769914+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderDetails] ([CustomerId], [DateDelivered], [DateOrdered], [OrderId], [OrderStatus])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderDetailId]
+FROM [OrderDetails]
+WHERE @@ROWCOUNT = 1 AND [OrderDetailId] = scope_identity();" (65d11854)
+2020-04-19T13:33:00.1538007+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T13:33:00.1638423+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.CheckInBook (Libraryhub)" in 590.9984000000001ms (afa2e885)
+2020-04-19T13:33:00.1734972+01:00 80000030-0001-fb00-b63f-84710c7967bb [INF] Request finished in 777.5756ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:32:10.5867520+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-19T14:32:17.5962898+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T14:32:17.6078597+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T14:32:17.6198551+01:00  [WRN] No type was specified for the decimal column '"GrandPrice"' on entity type '"Order"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T14:32:17.6336737+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"OrderItem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T14:32:17.9773715+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:32:28.5673997+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T14:32:29.8894798+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T14:32:29.9819662+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-19T14:32:30.6462447+01:00  [INF] Queued Hosted Service is starting. (cb05eba7)
+2020-04-19T14:32:34.5627751+01:00 80000094-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-19T14:32:34.5627751+01:00 80000096-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-19T14:32:35.6915254+01:00 80000096-0000-fb00-b63f-84710c7967bb [INF] Request finished in 1259.2078000000001ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-19T14:32:36.6707198+01:00 80000094-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:32:39.4894329+01:00 80000098-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-19T14:32:40.6765195+01:00 80000094-0000-fb00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T14:32:40.8465798+01:00 80000094-0000-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T14:32:40.8979839+01:00 80000094-0000-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 4193.182ms (afa2e885)
+2020-04-19T14:32:40.9078939+01:00 80000094-0000-fb00-b63f-84710c7967bb [INF] Request finished in 6497.477800000001ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:32:41.0955245+01:00 80000098-0000-fb00-b63f-84710c7967bb [INF] Request finished in 4231.1159ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-19T14:34:32.9846935+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:34:33.0303705+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:34:34.4094826+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:34:34.5981460+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:34:35.0672511+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Id] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-19T14:34:35.2271331+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedRoleName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedRoleName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedRoleName_0 IS NULL)" (65d11854)
+2020-04-19T14:34:37.7989168+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND @__p_0 IS NOT NULL) AND (([a].[RoleId] = @__p_1) AND @__p_1 IS NOT NULL)" (65d11854)
+2020-04-19T14:34:39.1830976+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:34:39.2518213+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 6187.501700000001ms (afa2e885)
+2020-04-19T14:34:39.2936025+01:00 80000103-0001-fc00-b63f-84710c7967bb [INF] Request finished in 7555.056500000001ms 400 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:40:31.4587486+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-19T14:40:38.2812736+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T14:40:38.2903369+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T14:40:38.2992272+01:00  [WRN] No type was specified for the decimal column '"GrandPrice"' on entity type '"Order"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T14:40:38.3116943+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"OrderItem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T14:40:38.4760474+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:40:44.4124996+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T14:40:44.8595396+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T14:40:45.4540686+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-19T14:40:49.1186341+01:00  [INF] Queued Hosted Service is starting. (cb05eba7)
+2020-04-19T14:40:49.2981813+01:00 80000034-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-19T14:40:49.2981813+01:00 80000032-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-19T14:40:49.8371087+01:00 80000034-0001-fb00-b63f-84710c7967bb [INF] Request finished in 437.5693ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-19T14:40:51.0159245+01:00 80000032-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:40:51.1391461+01:00 8000015e-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-19T14:40:54.8578849+01:00 80000032-0001-fb00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T14:40:54.9329312+01:00 80000032-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T14:40:54.9762677+01:00 80000032-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 3927.0165ms (afa2e885)
+2020-04-19T14:40:54.9886886+01:00 80000032-0001-fb00-b63f-84710c7967bb [INF] Request finished in 5708.791700000001ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:40:55.0284951+01:00 8000015e-0000-fe00-b63f-84710c7967bb [INF] Request finished in 4027.5241ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-19T14:41:26.4232284+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:41:26.5269610+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:41:31.0213431+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:41:31.1725432+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:41:31.4689451+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Id] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-19T14:41:32.6299141+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [OrderDetails] SET [DateDelivered] = @p0, [OrderStatus] = @p1
+WHERE [OrderDetailId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T14:41:36.8292788+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:41:37.2893843+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 10376.500100000001ms (afa2e885)
+2020-04-19T14:41:37.3217980+01:00 80000036-0001-fb00-b63f-84710c7967bb [INF] Request finished in 10922.2968ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:44:03.6248893+01:00 80000038-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:44:04.4609473+01:00 80000038-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:44:04.6798560+01:00 80000038-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:44:04.7165943+01:00 80000038-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:44:04.7901483+01:00 80000038-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:44:04.8097380+01:00 80000038-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 336.1076ms (afa2e885)
+2020-04-19T14:44:04.8491825+01:00 80000038-0001-fb00-b63f-84710c7967bb [INF] Request finished in 1450.6241ms 400 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:45:12.0449234+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/createOrder application/json 118 (ca22a1cb)
+2020-04-19T14:45:12.1255207+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"CheckInBook\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] CheckInBook(Libraryhub.Contracts.RequestObjs.OrderObj)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:45:12.2765319+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:45:13.2672470+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T14:45:16.0545969+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Orders] ([CustomerId], [GrandPrice], [TotalQuantity])
+VALUES (@p0, @p1, @p2);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();" (65d11854)
+2020-04-19T14:45:16.3936936+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderItems] ([BookId], [CoverPrice], [OrderId], [Quantity])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [OrderItemId]
+FROM [OrderItems]
+WHERE @@ROWCOUNT = 1 AND [OrderItemId] = scope_identity();" (65d11854)
+2020-04-19T14:45:16.4608791+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T14:45:16.4902433+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Books] SET [IsAvailable] = @p0, [Quantity] = @p1
+WHERE [BookId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T14:45:16.5308732+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderDetails] ([CustomerId], [DateDelivered], [DateOrdered], [OrderId], [OrderStatus])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderDetailId]
+FROM [OrderDetails]
+WHERE @@ROWCOUNT = 1 AND [OrderDetailId] = scope_identity();" (65d11854)
+2020-04-19T14:45:16.9731888+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:45:16.9920410+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.CheckInBook (Libraryhub)" in 4849.8709ms (afa2e885)
+2020-04-19T14:45:17.0032237+01:00 8000003a-0001-fb00-b63f-84710c7967bb [INF] Request finished in 4964.5474ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:45:30.5556552+01:00 8000003c-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:45:30.5658410+01:00 8000003c-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:45:30.6383122+01:00 8000003c-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:45:30.6482606+01:00 8000003c-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:45:30.6682324+01:00 8000003c-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:45:30.6830218+01:00 8000003c-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 104.8438ms (afa2e885)
+2020-04-19T14:45:30.6890972+01:00 8000003c-0001-fb00-b63f-84710c7967bb [INF] Request finished in 145.8264ms 400 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:45:42.3581067+01:00 80000160-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:45:42.4063551+01:00 80000160-0000-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:45:42.4613326+01:00 80000160-0000-fe00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:45:42.4756396+01:00 80000160-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:45:42.5048945+01:00 80000160-0000-fe00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:45:42.5148764+01:00 80000160-0000-fe00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 100.3354ms (afa2e885)
+2020-04-19T14:45:42.5268164+01:00 80000160-0000-fe00-b63f-84710c7967bb [INF] Request finished in 184.1592ms 400 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:45:59.6128397+01:00 8000003e-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:45:59.6838158+01:00 8000003e-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:45:59.8121144+01:00 8000003e-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:45:59.8280262+01:00 8000003e-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:45:59.8505689+01:00 8000003e-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Id] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-19T14:45:59.8711389+01:00 8000003e-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:45:59.8962899+01:00 8000003e-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 195.90970000000002ms (afa2e885)
+2020-04-19T14:45:59.9156660+01:00 8000003e-0001-fb00-b63f-84710c7967bb [INF] Request finished in 303.98220000000003ms 400 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:46:22.0923237+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:46:22.1237624+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:46:22.1571884+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:46:22.1913217+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:46:22.3095446+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Id] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-19T14:46:22.3393976+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [OrderDetails] SET [DateDelivered] = @p0, [OrderStatus] = @p1
+WHERE [OrderDetailId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T14:46:22.3603972+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:46:22.3753662+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 237.87290000000002ms (afa2e885)
+2020-04-19T14:46:22.3839631+01:00 80000162-0000-fe00-b63f-84710c7967bb [INF] Request finished in 491.6702ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:46:30.8075025+01:00 80000164-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/createOrder application/json 118 (ca22a1cb)
+2020-04-19T14:46:31.2848550+01:00 80000164-0000-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"CheckInBook\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] CheckInBook(Libraryhub.Contracts.RequestObjs.OrderObj)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:46:31.6760358+01:00 80000164-0000-fe00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:46:31.8388674+01:00 80000164-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T14:46:31.8765112+01:00 80000164-0000-fe00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:46:31.9107803+01:00 80000164-0000-fe00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.CheckInBook (Libraryhub)" in 601.3984ms (afa2e885)
+2020-04-19T14:46:31.9350253+01:00 80000164-0000-fe00-b63f-84710c7967bb [INF] Request finished in 1305.6631ms 400 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:46:43.0141340+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/createOrder application/json 118 (ca22a1cb)
+2020-04-19T14:46:43.0601727+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"CheckInBook\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] CheckInBook(Libraryhub.Contracts.RequestObjs.OrderObj)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:46:43.0847429+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:46:43.1127089+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T14:46:43.6501253+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Orders] ([CustomerId], [GrandPrice], [TotalQuantity])
+VALUES (@p0, @p1, @p2);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();" (65d11854)
+2020-04-19T14:46:43.9036972+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderItems] ([BookId], [CoverPrice], [OrderId], [Quantity])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [OrderItemId]
+FROM [OrderItems]
+WHERE @@ROWCOUNT = 1 AND [OrderItemId] = scope_identity();" (65d11854)
+2020-04-19T14:46:44.0854017+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T14:46:44.1226857+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Books] SET [Quantity] = @p0, [QuantitySold] = @p1
+WHERE [BookId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T14:46:44.1391415+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderDetails] ([CustomerId], [DateDelivered], [DateOrdered], [OrderId], [OrderStatus])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderDetailId]
+FROM [OrderDetails]
+WHERE @@ROWCOUNT = 1 AND [OrderDetailId] = scope_identity();" (65d11854)
+2020-04-19T14:46:44.1674144+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:46:44.2382803+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.CheckInBook (Libraryhub)" in 1110.9327ms (afa2e885)
+2020-04-19T14:46:44.2512363+01:00 80000166-0000-fe00-b63f-84710c7967bb [INF] Request finished in 1756.5956ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:47:04.8153968+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:47:04.8531376+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:47:04.8699530+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:47:04.8824639+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:47:04.9044063+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Id] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-19T14:47:04.9210930+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [OrderDetails] SET [DateDelivered] = @p0, [OrderStatus] = @p1
+WHERE [OrderDetailId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T14:47:04.9553774+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:47:04.9747143+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 104.34280000000001ms (afa2e885)
+2020-04-19T14:47:04.9844480+01:00 80000040-0001-fb00-b63f-84710c7967bb [INF] Request finished in 170.1396ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:47:25.7787076+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/createOrder application/json 117 (ca22a1cb)
+2020-04-19T14:47:28.1208136+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"CheckInBook\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] CheckInBook(Libraryhub.Contracts.RequestObjs.OrderObj)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:47:28.2196483+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:47:28.2535669+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T14:47:28.4035761+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Orders] ([CustomerId], [GrandPrice], [TotalQuantity])
+VALUES (@p0, @p1, @p2);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();" (65d11854)
+2020-04-19T14:47:28.4746706+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderItems] ([BookId], [CoverPrice], [OrderId], [Quantity])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [OrderItemId]
+FROM [OrderItems]
+WHERE @@ROWCOUNT = 1 AND [OrderItemId] = scope_identity();" (65d11854)
+2020-04-19T14:47:28.4991564+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__bookId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[BookId], [t].[AccessionNo], [t].[Author], [t].[ClassificationNo], [t].[Color], [t].[CoverPrice], [t].[ISBN], [t].[InitialQuantity], [t].[IsAvailable], [t].[Language], [t].[PublishYear], [t].[Quantity], [t].[QuantitySold], [t].[Section], [t].[Size], [t].[Title], [b0].[CheckOutActivityId], [b0].[AdminUserId], [b0].[BookId], [b0].[CheckOutDate], [b0].[CustomerId], [b0].[Email], [b0].[ExpectedReturnDate], [b0].[FullName], [b0].[NationalIdentificationNumber], [b0].[PhoneNumber], [b0].[ReturnDate], [b0].[Status]
+FROM (
+    SELECT TOP(2) [b].[BookId], [b].[AccessionNo], [b].[Author], [b].[ClassificationNo], [b].[Color], [b].[CoverPrice], [b].[ISBN], [b].[InitialQuantity], [b].[IsAvailable], [b].[Language], [b].[PublishYear], [b].[Quantity], [b].[QuantitySold], [b].[Section], [b].[Size], [b].[Title]
+    FROM [Books] AS [b]
+    WHERE ([b].[BookId] = @__bookId_0) AND @__bookId_0 IS NOT NULL
+) AS [t]
+LEFT JOIN [BookActivities] AS [b0] ON [t].[BookId] = [b0].[BookId]
+ORDER BY [t].[BookId], [b0].[CheckOutActivityId]" (65d11854)
+2020-04-19T14:47:28.5138274+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Books] SET [Quantity] = @p0, [QuantitySold] = @p1
+WHERE [BookId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T14:47:28.5232602+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OrderDetails] ([CustomerId], [DateDelivered], [DateOrdered], [OrderId], [OrderStatus])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [OrderDetailId]
+FROM [OrderDetails]
+WHERE @@ROWCOUNT = 1 AND [OrderDetailId] = scope_identity();" (65d11854)
+2020-04-19T14:47:28.5408616+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:47:28.5523602+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.CheckInBook (Libraryhub)" in 421.9411ms (afa2e885)
+2020-04-19T14:47:28.5584949+01:00 80000042-0001-fb00-b63f-84710c7967bb [INF] Request finished in 2930.0153ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T14:47:37.6576668+01:00 80000044-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T14:47:37.7049907+01:00 80000044-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T14:47:37.8225951+01:00 80000044-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T14:47:37.8720952+01:00 80000044-0001-fb00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T14:47:38.5547968+01:00 80000044-0001-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T14:47:38.6049413+01:00 80000044-0001-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 850.74ms (afa2e885)
+2020-04-19T14:47:38.6720583+01:00 80000044-0001-fb00-b63f-84710c7967bb [INF] Request finished in 956.2953ms 400 application/json; charset=utf-8 (791a596a)
+2020-04-19T18:37:23.5701171+01:00  [INF] User profile is available. Using '"C:\Users\flave\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-04-19T18:37:43.1022101+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"Book"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T18:37:43.5991681+01:00  [WRN] No type was specified for the decimal column '"PenaltyFee"' on entity type '"BookPenalty"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T18:37:44.9071274+01:00  [WRN] No type was specified for the decimal column '"GrandPrice"' on entity type '"Order"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T18:37:47.2722111+01:00  [WRN] No type was specified for the decimal column '"CoverPrice"' on entity type '"OrderItem"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-04-19T18:37:48.7498995+01:00  [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T18:38:30.9646273+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T18:38:34.9190855+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE (([a].[NormalizedName] = @__normalizedName_0) AND ([a].[NormalizedName] IS NOT NULL AND @__normalizedName_0 IS NOT NULL)) OR ([a].[NormalizedName] IS NULL AND @__normalizedName_0 IS NULL)" (65d11854)
+2020-04-19T18:38:35.1095917+01:00  [INF] Executing DbCommand [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedEmail] = @__normalizedEmail_0) AND ([a].[NormalizedEmail] IS NOT NULL AND @__normalizedEmail_0 IS NOT NULL)) OR ([a].[NormalizedEmail] IS NULL AND @__normalizedEmail_0 IS NULL)" (65d11854)
+2020-04-19T18:38:38.3968803+01:00  [INF] Queued Hosted Service is starting. (cb05eba7)
+2020-04-19T18:38:42.1556826+01:00 8000009c-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/index.html   (ca22a1cb)
+2020-04-19T18:38:42.1557362+01:00 8000009a-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/   (ca22a1cb)
+2020-04-19T18:38:48.1152132+01:00 8000009c-0000-fb00-b63f-84710c7967bb [INF] Request finished in 5624.3311ms 200 text/html;charset=utf-8 (791a596a)
+2020-04-19T18:38:52.9001666+01:00 8000009a-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GenerateErrorMessage\", controller = \"Errors\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GenerateErrorMessage(System.Nullable`1[System.Int32])" on controller "Libraryhub.CustomError.ErrorsController" ("Libraryhub"). (122b2fdf)
+2020-04-19T18:38:53.4969694+01:00 80000111-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44382/swagger/v1/swagger.json   (ca22a1cb)
+2020-04-19T18:38:54.5992339+01:00 8000009a-0000-fb00-b63f-84710c7967bb [INF] checkError (d4747a14)
+2020-04-19T18:38:54.7505344+01:00 8000009a-0000-fb00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.CustomError.BaseApiError"'. (8a1b66c8)
+2020-04-19T18:38:58.3149557+01:00 8000009a-0000-fb00-b63f-84710c7967bb [INF] Executed action "Libraryhub.CustomError.ErrorsController.GenerateErrorMessage (Libraryhub)" in 2140.7218000000003ms (afa2e885)
+2020-04-19T18:38:58.9239289+01:00 8000009a-0000-fb00-b63f-84710c7967bb [INF] Request finished in 16253.8709ms 404 application/json; charset=utf-8 (791a596a)
+2020-04-19T18:38:59.1036105+01:00 80000111-0001-fc00-b63f-84710c7967bb [INF] Request finished in 5545.669800000001ms 200 application/json;charset=utf-8 (791a596a)
+2020-04-19T18:40:34.7221453+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T18:40:34.9595563+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T18:40:37.8115780+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T18:40:39.7823150+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T18:40:40.1307914+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Id] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-19T18:40:40.6070265+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [OrderDetails] SET [DateDelivered] = @p0, [OrderStatus] = @p1
+WHERE [OrderDetailId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T18:40:41.2936599+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T18:40:41.3270449+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 6344.5207ms (afa2e885)
+2020-04-19T18:40:41.3708826+01:00 800000b3-0000-fd00-b63f-84710c7967bb [INF] Request finished in 9427.9806ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T18:41:22.2258016+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T18:41:22.6768233+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T18:41:24.1695711+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T18:41:27.7369813+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T18:41:28.7366328+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Id] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-19T18:41:28.8773920+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [OrderDetails] SET [DateDelivered] = @p0, [OrderStatus] = @p1
+WHERE [OrderDetailId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T18:41:33.1841575+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T18:41:33.2278328+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 10515.9866ms (afa2e885)
+2020-04-19T18:41:33.3909635+01:00 800000b5-0000-fd00-b63f-84710c7967bb [INF] Request finished in 11806.2912ms 201 application/json; charset=utf-8 (791a596a)
+2020-04-19T18:43:49.9450922+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44382/api/v1/order/confirmOrder application/json 66 (ca22a1cb)
+2020-04-19T18:43:50.0170894+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"ConfirmOrder\", controller = \"Order\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Libraryhub.Contracts.RequestObjs.RegBookResponseObj]] ConfirmOrder(Libraryhub.Contracts.RequestObjs.ConfirmOrder)" on controller "Libraryhub.Controllers.V1.OrderController" ("Libraryhub"). (122b2fdf)
+2020-04-19T18:43:50.6021473+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.0.2" initialized '"DataContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-04-19T18:43:50.6123145+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[OrderDetailId], [o].[CustomerId], [o].[DateDelivered], [o].[DateOrdered], [o].[OrderId], [o].[OrderStatus], [o0].[OrderId], [o0].[CustomerId], [o0].[GrandPrice], [o0].[TotalQuantity]
+FROM [OrderDetails] AS [o]
+INNER JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+WHERE ([o].[OrderId] = @__orderId_0) AND @__orderId_0 IS NOT NULL" (65d11854)
+2020-04-19T18:43:50.6450967+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NationalIdentificationNumber], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Id] = @__p_0) AND @__p_0 IS NOT NULL" (65d11854)
+2020-04-19T18:43:50.6597979+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Executing DbCommand [Parameters=["@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [OrderDetails] SET [DateDelivered] = @p0, [OrderStatus] = @p1
+WHERE [OrderDetailId] = @p2;
+SELECT @@ROWCOUNT;" (65d11854)
+2020-04-19T18:45:51.2731647+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"Libraryhub.Contracts.RequestObjs.RegOrderResponseObj"'. (8a1b66c8)
+2020-04-19T18:45:51.5254043+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Executed action "Libraryhub.Controllers.V1.OrderController.ConfirmOrder (Libraryhub)" in 121262.4188ms (afa2e885)
+2020-04-19T18:45:51.7771639+01:00 800000b7-0000-fd00-b63f-84710c7967bb [INF] Request finished in 121630.72140000001ms 201 application/json; charset=utf-8 (791a596a)

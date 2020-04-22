@@ -10,6 +10,7 @@ using Libraryhub.MailHandler.Service;
 using Libraryhub.Service.Services;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging; 
 using System;
@@ -40,6 +41,7 @@ namespace Libraryhub.Handlers.Books
         {
             try
             {
+                #region Check if requested book is available in the library
                 var thisBook = await _bookService.GetBookByIdAsync(request.BookId);
 
                 if (thisBook == null)
@@ -56,6 +58,7 @@ namespace Libraryhub.Handlers.Books
                         }
                     };
                 }
+                
 
                 if (!thisBook.IsAvailable)
                 {
@@ -70,51 +73,68 @@ namespace Libraryhub.Handlers.Books
                         }
                     };
                 }
+                #endregion 
 
-                if (thisBook.Quantity == 0)
+                #region Check out requested book and update book activity
+
+                var customer = await _userManager.FindByIdAsync(request.CustomerId);
+
+                var checkOut = BuildDomainObject(request, customer);
+                using (var _transaction = _bookService.Context().Database.BeginTransaction())
                 {
-                    thisBook.IsAvailable = false;
-                    var updated = await _bookService.UpdateBookAsync(thisBook);
-
-                    await _bookService.CommitChangesAsync();
-
-                    return new CheckOutActivityResponseObj
+                    try
                     {
-                        Status = new APIResponseStatus
+                        thisBook.Quantity = (thisBook.Quantity - 1);
+                        if (thisBook.Quantity == 0) { thisBook.IsAvailable = false; }
+                        await _bookService.UpdateBookAsync(thisBook);
+                        await _bookService.SaveChangesAsync();
+
+                        await _bookService.CheckOutBookAsync(checkOut);
+                        await _bookService.SaveChangesAsync();
+
+                        await _transaction.CommitAsync();
+                    }
+                    catch (SqlException ex)
+                    {
+                        await _transaction.RollbackAsync();
+                        var errorId = ErrorID.Generate(4);
+                        _logger.LogInformation($"CheckInBookHandler{errorId}", $"Error Message{ ex.InnerException?.Message ?? ex?.Message}");
+                        return new CheckOutActivityResponseObj
                         {
-                            IsSuccessful = false,
-                            Message = new APIResponseMessage
+                            Status = new APIResponseStatus
                             {
-                                FriendlyMessage = "This book is not available to checkout"
+                                IsSuccessful = false,
+                                Message = new APIResponseMessage
+                                {
+                                    FriendlyMessage = "Something went wrong",
+                                    MessageId = $"CheckOutBookHandler{errorId}",
+                                    TechnicalMessage = ex.InnerException?.Message ?? ex?.Message
+                                }
                             }
-                        }
-                    };
+                        };
+
+                    }
+                    finally { await _transaction.DisposeAsync(); }
                 }
 
-                var customer = await _userManager.FindByIdAsync(request.CustomerId); 
+                #endregion
 
-                var checkOut = BuildRequestObject(request, customer);
-
-                thisBook.Quantity = thisBook.Quantity - 1;
-                if (thisBook.Quantity < 1) thisBook.IsAvailable = false;
-                await _bookService.UpdateBookAsync(thisBook);
-
-                await _bookService.CheckOutBookAsync(checkOut);
-
-                await _bookService.CommitChangesAsync();
-
+                #region Send mail to the customer leting him know the Expected date to return book collected
                 var numberOfdays = Convert.ToInt32((checkOut.ExpectedReturnDate - checkOut.CheckOutDate).TotalDays);
 
-                if (!await SendMail(request, thisBook.Title, checkOut.ExpectedReturnDate, numberOfdays)) {  };
+                if (!await SendMail(request, thisBook.Title, checkOut.ExpectedReturnDate, numberOfdays)) { };
 
                 return new CheckOutActivityResponseObj
                 {
                     CheckOutActivityId = checkOut.CheckOutActivityId,
                     Status = new APIResponseStatus { IsSuccessful = true }
                 };
+                #endregion
+
             }
             catch (Exception ex)
             {
+                #region Log eroor with ErroId and return error response
                 var errorId = ErrorID.Generate(4);
                 _logger.LogInformation($"CheckOutBookHandler{errorId}", $"Error Message{ ex.InnerException.Message}");
                 return new CheckOutActivityResponseObj
@@ -130,10 +150,13 @@ namespace Libraryhub.Handlers.Books
                         }
                     }
                 };
+                #endregion
             }
         }
 
-        private BooksActivity BuildRequestObject(CheckOutCommand request, ApplicationUser user )
+        #region Build Domain object
+
+        private BooksActivity BuildDomainObject(CheckOutCommand request, ApplicationUser user)
         {
             var checkOut = new BooksActivity
             {
@@ -152,7 +175,12 @@ namespace Libraryhub.Handlers.Books
             return checkOut;
         }
 
-        private async  Task<bool> SendMail(CheckOutCommand request, string bookTitle, DateTime expectedReturnDate, int numberOfdays)
+        #endregion
+
+
+        #region Send Mail method
+
+        private async Task<bool> SendMail(CheckOutCommand request, string bookTitle, DateTime expectedReturnDate, int numberOfdays)
         {
             var users = await _userManager.Users.ToListAsync();
             var customer = users.FirstOrDefault(c => c.Id == request.CustomerId);
@@ -161,26 +189,28 @@ namespace Libraryhub.Handlers.Books
             try
             {
                 await _emailService.Send(new EmailMessage
-            {
-                Content = $" Dear {customer.FullName}. <br> Thanks for your patronage. <br> The book with Title : {bookTitle}" +
+                {
+                    Content = $" Dear {customer.FullName}. <br> Thanks for your patronage. <br> The book with Title : {bookTitle}" +
                     $" should be returned on the {expectedReturnDate} {numberOfdays} days from now",
-                Subject = "Library Reminder",
-                FromAddresses = new List<EmailAddress>
+                    Subject = "Library Reminder",
+                    FromAddresses = new List<EmailAddress>
                         {
                             new EmailAddress{ Address = admin.Email, Name = admin.FullName}
                         },
-                ToAddresses = new List<EmailAddress>
+                    ToAddresses = new List<EmailAddress>
                         {
                             new EmailAddress{ Address = customer.Email, Name = customer.FullName }
                         },
-            });
+                });
                 return true;
             }
             catch (Exception)
             {
                 return false;
             }
-            
+
         }
+
+        #endregion
     }
 }

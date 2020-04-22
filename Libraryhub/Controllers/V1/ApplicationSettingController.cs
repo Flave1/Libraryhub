@@ -39,7 +39,7 @@ namespace Libraryhub.Controllers.V1
             catch (Exception ex)
             {
                 var errorId = ErrorID.Generate(4);
-                _logger.LogInformation($"ApplicationSettingController{errorId}", $"Error Message{ ex.InnerException.Message}");
+                _logger.LogInformation($"ApplicationSettingController{errorId}", $"Error Message{ ex?.InnerException?.Message ?? ex?.Message}");
                 return new EmailResponseObj
                 {
                     Status = new APIResponseStatus
@@ -49,12 +49,48 @@ namespace Libraryhub.Controllers.V1
                         {
                             FriendlyMessage = "Something went wrong",
                             MessageId = $"ApplicationSettingController{errorId}",
-                            TechnicalMessage = ex.InnerException.Message
+                            TechnicalMessage = ex?.InnerException?.Message ?? ex?.Message
                         }
                     }
                 };
             }
              
+        }
+
+        [HttpPut(ApiRoutes.Settings.LEFT_OVER_REMINDER_ENDPOINT)]
+        public async Task<ActionResult<EmailResponseObj>> LeftOverReminder(int SwitchValue)
+        {
+            try
+            {
+                var done = await _appSettingService.LeftOverReminder(SwitchValue);
+                return new EmailResponseObj
+                {
+                    IsSuccessful = done ? true : false,
+                    Status = new APIResponseStatus
+                    {
+                        IsSuccessful = done ? true : false,
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                var errorId = ErrorID.Generate(4);
+                _logger.LogInformation($"ApplicationSettingController{errorId}", $"Error Message{ ex?.InnerException?.Message ?? ex?.Message}");
+                return new EmailResponseObj
+                {
+                    Status = new APIResponseStatus
+                    {
+                        IsSuccessful = false,
+                        Message = new APIResponseMessage
+                        {
+                            FriendlyMessage = "Something went wrong",
+                            MessageId = $"ApplicationSettingController{errorId}",
+                            TechnicalMessage = ex?.InnerException?.Message ?? ex?.Message
+                        }
+                    }
+                };
+            }
+
         }
     }
 }

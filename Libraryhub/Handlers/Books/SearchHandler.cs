@@ -32,42 +32,42 @@ namespace Libraryhub.Handlers.Books
             List<Book> bookList = new List<Book>();
             List<Book> searched = new List<Book>();
 
-            if (!string.IsNullOrEmpty(request.AccessionNo))
+            if (!string.IsNullOrEmpty(request.AccessionNo) || request.AccessionNo != "string")
             {
                 searched = books.Where(x => x.AccessionNo == request.AccessionNo).ToList();
                 bookList.AddRange(searched);
             }
-            if (!string.IsNullOrEmpty(request.Author))
+            if (!string.IsNullOrEmpty(request.Author) || request.Author != "string")
             {
                 searched = books.Where(x => x.Author == request.Author).ToList();
                 bookList.AddRange(searched);
             }
-            if (!string.IsNullOrEmpty(request.ClassificationNo))
+            if (!string.IsNullOrEmpty(request.ClassificationNo) || request.ClassificationNo != "string")
             {
                 searched = books.Where(x => x.ClassificationNo == request.ClassificationNo).ToList();
                 bookList.AddRange(searched);
             }
-            if (!string.IsNullOrEmpty(request.Color))
+            if (!string.IsNullOrEmpty(request.Color) || request.Color != "string")
             {
                 searched = books.Where(x => x.Color == request.Color).ToList();
                 bookList.AddRange(searched);
             }
-            if (!string.IsNullOrEmpty(request.ISBN))
+            if (!string.IsNullOrEmpty(request.ISBN) || request.ISBN != "string")
             {
                 searched = books.Where(x => x.ISBN == request.ISBN).ToList();
                 bookList.AddRange(searched);
             }
-            if (!string.IsNullOrEmpty(request.Language))
+            if (!string.IsNullOrEmpty(request.Language) || request.Language != "string")
             {
                 searched = books.Where(x => x.Language == request.Language).ToList();
                 bookList.AddRange(searched);
             }
-            else if (!string.IsNullOrEmpty(request.Section))
+            else if (!string.IsNullOrEmpty(request.Section) || request.Section != "string")
             {
                 searched = books.Where(x => x.Section == request.Section).ToList();
                 bookList.AddRange(searched);
             }
-            if (!string.IsNullOrEmpty(request.Size))
+            if (!string.IsNullOrEmpty(request.Size) || request.Size != "string")
             {
                 searched = books.Where(x => x.Size == request.Size).ToList();
                 bookList.AddRange(searched);
@@ -77,12 +77,12 @@ namespace Libraryhub.Handlers.Books
                 bookList = books.Where(x => x.IsAvailable == request.Status).ToList();
                 bookList.AddRange(bookList);
             }
-            if (!string.IsNullOrEmpty(request.Title))
+            if (!string.IsNullOrEmpty(request.Title) || request.Title != "string")
             {
                 searched = books.Where(x => x.Title == request.Title).ToList();
                 bookList.AddRange(searched);
             }
-            if (!string.IsNullOrEmpty(request.PublishYear))
+            if (!string.IsNullOrEmpty(request.PublishYear) || request.PublishYear != "string")
             {
                 searched = books.Where(x => x.PublishYear == request.PublishYear).ToList();
                 bookList.AddRange(searched);

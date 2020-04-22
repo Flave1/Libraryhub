@@ -2,6 +2,7 @@
 using Libraryhub.Data;
 using Libraryhub.Domain;
 using Libraryhub.DomainObjs;
+using Libraryhub.Repository.Cache;
 using Libraryhub.Service.ServiceImplementation;
 using Libraryhub.Service.Services;
 using MediatR;
@@ -24,6 +25,8 @@ namespace Libraryhub.Installers
 
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IBookService, BookService>();
+            //services.Decorate<IBookService, CachedBookService>();
+
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<DataContext>();

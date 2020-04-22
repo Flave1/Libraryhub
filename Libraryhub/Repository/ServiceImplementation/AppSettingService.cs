@@ -58,9 +58,12 @@ namespace Libraryhub.Service.ServiceImplementation
                         {
                             _logger.LogError(ex, "An error occurred trying to send  " + "Email. Error: {Message}", ex.Message);
                         }
-                        await Task.Delay(TimeSpan.FromDays(1), token);
+                        await Task.Delay(TimeSpan.FromMilliseconds(100), token);
                     }
                 });
+            }
+            else
+            { 
             }
             return await Task.Run(() => true);
         }

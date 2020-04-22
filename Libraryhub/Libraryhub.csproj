@@ -33,6 +33,11 @@
     <Compile Remove="Data\Migrations\20200402143322_modifiesBookPenalty.Designer.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="DomainObjs\BooksActivity.cs~RF3390be42.TMP" />
+    <None Remove="Handlers\Orders\OrderHandler.cs~RF352cd8fa.TMP" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />

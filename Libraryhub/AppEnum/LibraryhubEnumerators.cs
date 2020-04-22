@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Libraryhub.AppEnum
+﻿namespace Libraryhub.AppEnum
 {
     public enum BookActivityStatus
     {
@@ -15,5 +10,16 @@ namespace Libraryhub.AppEnum
     {
         OFF = 0,
         ON = 1,
+    }
+    public enum OrderStatus
+    {
+        Not_Delivered = 0,
+        Delivered = 1  
+    }
+
+    public enum Role
+    {
+        Admin = 1,
+        User
     }
 }

@@ -55,9 +55,8 @@ namespace Libraryhub.Service.ServiceImplementation
         {
             var bookActivity = await GetCheckOutActivityById(req.CheckOutActivityId);
             _dataContext.Entry(bookActivity).CurrentValues.SetValues(req);
-
-            var checkedIn = await _dataContext.SaveChangesAsync();
-            return checkedIn > 0;
+             
+            return 1 > 0;
         }
 
         public async Task<BooksActivity> GetCheckOutActivityById(int id)
@@ -89,12 +88,7 @@ namespace Libraryhub.Service.ServiceImplementation
                 && x.Title.ToLower().Trim() == book.Title.ToLower().Trim());
 
             return boolValue;
-        }
-
-        public async Task CommitChangesAsync()
-        {
-            await _dataContext.SaveChangesAsync();
-        }
+        } 
 
         public async Task<IEnumerable<BooksActivity>> GetAllCheckoutActivities()
         {
@@ -117,6 +111,20 @@ namespace Libraryhub.Service.ServiceImplementation
             return requestedBooks;
         }
 
+
+        public async Task<BooksActivity> GetBookActivityByBookId(int bookId)
+        {
+            return await _dataContext.BookActivities.FirstOrDefaultAsync(x => x.BookId == bookId);
+        }
+
+        public DataContext Context()
+        {
+            return new DataContext();
+        }
+        public async Task SaveChangesAsync()
+        {
+            await _dataContext.SaveChangesAsync();
+        }
     }
 }
     
